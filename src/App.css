@@ -1,3 +1,31 @@
 body {
   height: 200vh;
+  background-color: #F5F5F5;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  color: white;
+  background-color: #262626;
+}
+
+.btn:hover {
+  background-color: black;
+}
+
+.btn-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }

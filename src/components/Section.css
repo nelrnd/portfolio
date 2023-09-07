@@ -1,0 +1,8 @@
+.Section {
+  padding: 16px;
+}
+
+.Section_content {
+  max-width: 900px;
+  margin: auto;
+}
