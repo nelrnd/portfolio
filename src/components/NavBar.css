@@ -1,0 +1,108 @@
+.NavBar {
+  width: 900px;
+  max-width: calc(100% - 32px);
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 24px;
+  transform: translateX(-50%);
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* NavBar background */
+.NavBar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(36, 36, 36, 0.80);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 8px;
+  border-bottom: solid 2px rgba(26, 26, 26, 0.80);
+}
+
+.NavBar .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.NavBar .nav-links a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 8px;
+  display: block;
+}
+
+.NavBar .nav-links a:hover {
+  color: #C7C7C7;
+}
+
+.NavBar .menu-btn {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .NavBar .menu-btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .NavBar .menu-btn .bar-1,
+  .NavBar .menu-btn .bar-2 {
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .NavBar.opened .menu-btn .bar-1 {
+    transform: translateY(-5.5px) rotate(45deg);
+  }
+
+  .NavBar.opened .menu-btn .bar-2 {
+    transform: translateY(5.5px) rotate(-45deg);
+  }
+
+  .NavBar nav {
+    display: none;
+  }
+
+  .NavBar.opened nav {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    background-color: rgba(36, 36, 36, 0.80);
+    padding: 16px 10px;
+    border-bottom: solid 2px rgba(26, 26, 26, 0.80);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .NavBar .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .NavBar .nav-links a {
+    padding: 6px;
+  }
+}
