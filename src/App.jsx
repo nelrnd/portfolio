@@ -36,7 +36,7 @@ const projects = [
   }
 ]
 
-function App() {
+const App = () => {
   return (
     <>
       <NavBar />
@@ -103,9 +103,9 @@ const TextInput = ({ name, type, value, setValue }) => {
     <div className='TextInput'>
       <label htmlFor={name}>{name}</label>
       {type === 'area' ? (
-        <textarea id={name} placeholder={name}></textarea>
+        <textarea id={name} placeholder={name} value={value} onChange={(e) => setValue(e.target.value)}></textarea>
       ) : (
-        <input type={type} id={name} name={name} placeholder={name} />
+        <input type={type} id={name} name={name} placeholder={name} value={value} onChange={(e) => setValue(e.target.value)} />
       )}
     </div>
   )
