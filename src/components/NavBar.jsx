@@ -11,7 +11,7 @@ const NavBar = () => {
   return (
     <>
       <header className={`NavBar${menuOpen ? ' opened' : ''}`}>
-        <a href="">
+        <a href="#hero">
           <img src={icon} alt="Nel Renaudin" />
         </a>
 

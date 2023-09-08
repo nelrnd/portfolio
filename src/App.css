@@ -1,31 +1,284 @@
-body {
-  height: 200vh;
-  background-color: #F5F5F5;
+:root {
+  --white: #FFFFFF;
+  --ghost: #F0F0F0;
+  --silver: #757575;
+  --black: #0D0D0D;
 }
 
-h3 {
+body {
+  color: var(--black);
+}
+
+.content {
+  max-width: 56rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2.5rem;
+}
+
+.content > h2:first-child {
+  grid-column: 1 / span 4;
+  margin-bottom: 20px;
+}
+
+.hero {
+  padding: 10rem 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 130%;
+  grid-column: span 4;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2.5rem;
+}
+
+.project-text {
+  padding: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-text h3 {
   font-size: 20px;
-  margin-bottom: 16px;
+}
+
+.project-text .built-with {
+  font-style: italic;
+}
+
+.project-img img {
+  width: 100%;
+}
+
+.projects {
+  padding: 6rem 1rem;
+}
+
+.projects-list {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about {
+  padding: 6rem 1rem;
+}
+
+.about-text {
+  grid-column: span 4;
+  font-size: 24px;
+  line-height: 170%;
 }
 
 .btn {
-  display: block;
-  width: fit-content;
+  color: var(--ghost);
+  font-size: 1rem;
+  font-family: Inter;
+  font-weight: 500;
   text-decoration: none;
-  text-transform: uppercase;
+  line-height: 165%;
+  display: block;
+  width: 100%;
+  background-color: var(--black);
+  padding: 0.625rem 1.625rem;
   border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
-  color: white;
-  background-color: #262626;
+  border-radius: 1rem;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background-color: black;
+  opacity: 0.9;
+}
+
+.btn:focus {
+  outline: solid 2px var(--silver);
 }
 
 .btn-row {
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   align-items: center;
+}
+
+.btn-row .btn {
+  width: fit-content;
+}
+
+.TextInput label {
+  position: absolute;
+  transform: scaleY(0);
+}
+
+.TextInput input,
+.TextInput textarea {
+  color: var(--black);
+  font-size: 1rem;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 165%;
+  display: block;
+  width: 100%;
+  background-color: var(--ghost);
+  padding: 0.625rem 1.625rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+.TextInput textarea {
+  height: 8rem;
+  resize: none;
+}
+
+.TextInput input:focus,
+.TextInput textarea:focus {
+  outline: solid 2px var(--silver);
+}
+
+.TextInput input::placeholder,
+.TextInput textarea::placeholder {
+  color: var(--silver);
+  text-transform: capitalize;
+}
+
+.contact {
+  background-color: var(--white);
+  padding: 10rem 1rem;
+}
+
+.contact-form,
+.contact-text {
+  grid-column: span 2;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-text p {
+  line-height: 170%;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+}
+
+.contact-links li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-links li img {
+  opacity: 0.5;
+}
+
+.contact-links li a {
+  color: var(--black);
+}
+
+.contact-links li a:hover {
+  color: var(--silver);
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  color: var(--silver);
+  background-color: var(--black);
+  padding: 10rem 1rem;
+}
+
+.footer-img {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  opacity: .5;
+  width: 300px;
+  height: 300px;
+  transform: rotate(15deg);
+}
+
+.footer-text {
+  position: relative;
+  z-index: 1;
+  grid-column: 3 / span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (max-width: 850px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  .project-text {
+    order: 2;
+  }
+
+  .contact-text p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-bottom: 6rem;
+  }
+  
+  .projects {
+    padding: 4rem 1rem;
+  }
+
+  .about {
+    padding: 4rem 1rem;
+  }
+
+  .contact {
+    padding: 4rem 1rem;
+  }
+
+  .contact .content {
+    grid-template-columns: 1fr;
+  }
+
+  .contact .content > h2:first-child,
+  .contact-form,
+  .contact-text {
+    grid-column: span 1;
+  }
+
+  .contact-form {
+    order: 2;
+  }
+
+  .contact-text {
+    margin-bottom: 2rem;
+  }
+
+  .footer {
+    padding: 6rem 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-text {
+    grid-column: 1 / span 4;
+  }
 }
