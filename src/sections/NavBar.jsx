@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import icon from '../assets/icon.svg';
-import sunIcon from '../assets/sun.svg';
-import moonIcon from '../assets/moon.svg';
-
-import '../styles/NavBar.sass';
+import '../styles/NavBar.css';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,9 +32,6 @@ const NavBar = () => {
               <li>
                 <a href="#contact" onClick={close}>CONTACT</a>
               </li>
-              <li>
-                <ThemeSwitch />
-              </li>
             </ul>
           </nav>
         </div>
@@ -46,15 +40,5 @@ const NavBar = () => {
     </>
   )
 }
-
-const ThemeSwitch = () => (
-  <div className='ThemeSwitch' aria-hidden="true">
-    <input type="checkbox" name="theme-switch" title="switch theme" />
-    <div className='ThemeSwitch_icons'>
-      <img src={sunIcon} alt="" />
-      <img src={moonIcon} alt="" />
-    </div>
-  </div>
-)
 
 export default NavBar

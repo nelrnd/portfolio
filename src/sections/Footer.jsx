@@ -1,5 +1,5 @@
 import badgeIcon from '../assets/badge-icon.svg';
-import '../styles/Footer.sass';
+import '../styles/Footer.css';
 
 const Footer = () => (
   <footer className='Footer pd-10'>

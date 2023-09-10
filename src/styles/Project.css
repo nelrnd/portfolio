@@ -1,0 +1,9 @@
+.Project-img img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .Project-img {
+    order: -1;
+  }
+}

@@ -172,7 +172,11 @@ img {
 /* Layout */
 
 section {
-  padding: 10rem auto;
+  padding-top: 8rem;
+}
+
+section:last-of-type {
+  padding-bottom: 8rem;
 }
 
 section > .content {
@@ -190,13 +194,13 @@ section > .content {
   grid-column: 1 / span 2;
 }
 
-.flow-row {
+.flex-row {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
 
-.flex-column {
+.flex-col {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -244,7 +248,7 @@ section > .content {
   }
 
   section {
-    padding: 4rem 1rem;
+    padding: 8rem 1rem 0
   }
 
   section > .content {

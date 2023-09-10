@@ -33,7 +33,7 @@ const projects = [
 const Projects = () => (
   <section id="projects">
     <div className="content">
-      <h2>Projects</h2>
+      <h2 className='mb-2'>Projects</h2>
       <div className='flex-col gap-4'>
         {projects.map((project, id) => <Project key={id} project={project} />)}
       </div>

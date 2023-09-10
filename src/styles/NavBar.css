@@ -1,0 +1,137 @@
+@import './default.css';
+
+.NavBar {
+  width: var(--layout-width);
+  padding: 0.625rem 1rem;
+  position: fixed;
+  z-index: 1000;
+  top: 1rem;
+  left: calc(50% - var(--layout-width) / 2);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  animation-name: navbar-anim;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0, 0.19, 0.2, 0.97);
+  animation-fill-mode: both;
+}
+
+.NavBar img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.NavBar a {
+  color: var(--color-50);
+  font-weight: 400;
+  text-decoration: none;
+  display: block;
+  padding: 0.25rem 0.5rem;
+}
+
+.NavBar a:hover {
+  color: var(--color-100);
+}
+
+.NavBar .menu-btn {
+    display: none;
+    background-color: transparent;
+}
+
+.NavBar::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  display: block;
+  background-color: hsla(240, 10%, 10%, 95%);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+  border-bottom: solid var(--color-650);
+}
+
+.NavBar_backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 900;
+}
+
+@keyframes navbar-anim {
+  from {
+    transform: translateY(-4rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes navbar-menu-anim {
+  from {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .NavBar {
+    left: 0;
+    margin: 0 1rem;
+    width: calc(100% - 2rem);
+  }
+    
+  .NavBar .menu-btn {
+      display: flex
+  }
+
+  .NavBar nav {
+    display: none;
+  }
+
+  .NavBar ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .NavBar .menu-btn .bar-1,
+  .NavBar .menu-btn .bar-2 {
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+  }
+  
+  .NavBar.open nav {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 0;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    background-color: hsla(240, 10%, 10%, 95%);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    border-radius: 1rem;
+    border-bottom: solid var(--color-650);
+    transform-origin: top center;
+    animation-name: navbar-menu-anim;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0, 0.19, 0.2, 0.97);
+  }
+  
+  .NavBar.open .menu-btn .bar-1 {
+    transform: translateY(-0.33rem) rotate(45deg);
+  }
+  .NavBar.open .menu-btn .bar-2 {
+    transform: translateY(0.33rem) rotate(-45deg);
+  }
+}
