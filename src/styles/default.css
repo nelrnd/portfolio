@@ -1,0 +1,301 @@
+:root {
+  --color-1000: hsl(0, 0%, 0%);
+  --color-950: hsl(240, 10%, 5%);
+  --color-900: hsl(240, 10%, 10%);
+  --color-650: hsl(240, 10%, 35%);
+  --color-350: hsl(240, 10%, 65%);
+  --color-100: hsl(240, 10%, 90%);
+  --color-50: hsl(240, 10%, 95%);
+  --color-0: hsl(0, 0%, 100%);
+
+  --font-stack: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --layout-width: min(1800px, 80vw);
+
+  font-size: clamp(16px, 1.7vw, 32px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-stack);
+}
+
+body {
+  background-color: var(--color-0);
+}
+
+/* Basic text */
+
+h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: var(--color-950);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 120%;
+  color: var(--color-950);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 120%;
+  color: var(--color-950);
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 170%;
+  color: var(--color-650);
+}
+
+.large {
+  font-size: 1.5rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+/* Link and button */
+
+a {
+  font-weight: 500;
+  color: var(--900);
+}
+
+a:hover {
+  color: var(--650);
+}
+
+button, .btn {
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 160%;
+  color: var(--color-100);
+  background-color: var(--color-950);
+  padding: 0.625rem 1.625rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+button > span, .btn > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem
+}
+
+button:hover, .btn:hover {
+  color: var(--color-100);
+  opacity: 0.9;
+}
+
+button:focus, .btn:focus {
+  outline: solid 0.15rem var(--color-350);
+}
+
+form button, .form button {
+  width: 100%;
+}
+
+/* Text input */
+
+textarea, input[type="text"], input[type="email"] {
+  color: var(--color-950);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 160%;
+  display: block;
+  width: 100%;
+  background-color: var(--color-50);
+  padding: 0.625rem 1.625rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+textarea:placeholder, input:placeholder {
+  color: var(--color-650);
+}
+
+textarea:focus, input[type="text"]:focus, input[type="email"]:focus {
+  outline: solid 2px var(--color-350)
+}
+
+textarea {
+  height: 8.625rem;
+  resize: none;
+}
+
+/* Image */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.icon, svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Spacing */
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-1_5 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+/* Layout */
+
+section {
+  padding: 10rem auto;
+}
+
+section > .content {
+  width: var(--layout-width);
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.span-2 {
+  grid-column: 1 / span 2;
+}
+
+.flow-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spaced {
+  justify-content: space-between;
+}
+
+.aligned {
+  align-items: center;
+}
+
+.gap-0_5 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-1_5 {
+  gap: 1.5rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-4 {
+  gap: 4rem;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 4rem 1rem;
+  }
+
+  section > .content {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-950);
+  }
+
+  h1, h2, h3 {
+    color: var(--color-50);
+  }
+  
+  p {
+    color: var(--color-350);
+  }
+  
+  a {
+    color: var(--color-100);
+  }
+  
+  a:hover, textarea::placeholder, input::placeholder {
+    color: var(--color-350);
+  }
+  
+  button, .btn {
+    border: solid 0.125rem var(--color-100);
+  }
+  
+  button:hover, .btn:hover {
+    border-color: var(--color-350);
+    opacity: 1;
+  }
+  
+  button:focus, .btn:focus {
+    outline: solid 0.15rem var(--color-350);
+  }
+  
+  textarea, input[type="text"], input[type="email"] {
+    color: var(--color-50);
+    background-color: var(--color-900);
+  }
+  
+  textarea:focus, input[type="text"]:focus, input[type="email"]:focus {
+    outline: solid 0.15rem var(--color-350)
+  }
+}

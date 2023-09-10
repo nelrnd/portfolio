@@ -27,9 +27,6 @@
   animation-timing-function: cubic-bezier(0, 0.19, 0.2, 0.97)
   animation-fill-mode: both
 
-  a[href="hero"]
-    margin-right: auto
-
   img
     width: 1.5rem
     height: 1.5rem
@@ -60,6 +57,54 @@
   z-index: -1
   content: ""
   display: block
+
+@keyframes navbar-anim
+  from
+    transform: translateY(-4rem)
+  to
+    transform: translateY(0)
+
+@keyframes navbar-menu-anim
+  from
+    transform: translateY(-1rem)
+    opacity: 0
+  to
+    transform: translateY(0)
+    opacity: 1
+
+.ThemeSwitch
+  margin: -0.25rem
+  width: 2rem
+  height: 2rem
+  border-radius: 0.5rem
+  position: relative
+  overflow: hidden
+
+  input[type="checkbox"]
+    width: 100%
+    height: 100%
+    appearance: none
+    cursor: pointer
+
+  .ThemeSwitch_icons
+    position: absolute
+    left: 0
+    top: 0
+    pointer-events: none
+    transition: transform 0.3s ease-in-out
+
+  .ThemeSwitch_icons img
+    width: 2rem
+    height: 2rem
+    padding: 0.5rem
+
+  input[type="checkbox"]:checked + .ThemeSwitch_icons
+    transform: translateY(-50%)
+
+.ThemeSwitch:hover
+  background-color: base.$c07
+  outline: solid 2px base.$c03
+
 
 @media (max-width: 800px)
   .NavBar
@@ -103,17 +148,6 @@
     .bar-2
       transform: translateY(0.33rem) rotate(-45deg)
 
-@keyframes navbar-anim
-  from
-    transform: translateY(-4rem)
-  to
-    transform: translateY(0)
-
-@keyframes navbar-menu-anim
-  from
-    transform: translateY(-1rem)
-    opacity: 0
-  to
-    transform: translateY(0)
-    opacity: 1
-
+  .ThemeSwitch
+    margin-left: 0.25rem
+    margin-bottom: 0.015rem

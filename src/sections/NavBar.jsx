@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <>
       <header className={`NavBar ${isOpen ? 'open' : ''}`}>
-        <div className="flex-row align">
+        <div className="flex-row align spaced">
           <a href="#hero">
             <img src={icon} alt="Nel Renaudin" />
           </a>
@@ -35,6 +35,9 @@ const NavBar = () => {
               <li>
                 <a href="#contact" onClick={close}>CONTACT</a>
               </li>
+              <li>
+                <ThemeSwitch />
+              </li>
             </ul>
           </nav>
         </div>
@@ -44,5 +47,14 @@ const NavBar = () => {
   )
 }
 
+const ThemeSwitch = () => (
+  <div className='ThemeSwitch' aria-hidden="true">
+    <input type="checkbox" name="theme-switch" title="switch theme" />
+    <div className='ThemeSwitch_icons'>
+      <img src={sunIcon} alt="" />
+      <img src={moonIcon} alt="" />
+    </div>
+  </div>
+)
 
 export default NavBar

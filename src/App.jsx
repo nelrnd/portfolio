@@ -4,8 +4,7 @@ import Projects from './sections/Projects';
 import About from './sections/About';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
-import './styles/base.sass';
-import './styles/misc.sass';
+import './styles/default.css';
 
 const App = () => {
   return (
