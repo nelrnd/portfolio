@@ -1,9 +1,6 @@
-:root {
-  --white: #FFFFFF;
-  --ghost: #F0F0F0;
-  --silver: #757575;
-  --black: #0D0D0D;
-}
+/*
+
+
 
 body {
   color: var(--black);
@@ -19,66 +16,11 @@ body {
 
 .content > h2:first-child {
   grid-column: 1 / span 4;
+  font-size: 1.875rem;
   margin-bottom: 20px;
 }
 
-.hero {
-  padding: 10rem 1rem;
-}
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 400;
-  line-height: 130%;
-  grid-column: span 4;
-}
-
-.project {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 2.5rem;
-}
-
-.project-text {
-  padding: 1.25rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.project-text h3 {
-  font-size: 20px;
-}
-
-.project-text .built-with {
-  font-style: italic;
-}
-
-.project-img img {
-  width: 100%;
-}
-
-.projects {
-  padding: 6rem 1rem;
-}
-
-.projects-list {
-  grid-column: span 4;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.about {
-  padding: 6rem 1rem;
-}
-
-.about-text {
-  grid-column: span 4;
-  font-size: 24px;
-  line-height: 170%;
-}
 
 .btn {
   color: var(--ghost);
@@ -87,7 +29,6 @@ body {
   font-weight: 500;
   text-decoration: none;
   line-height: 165%;
-  display: block;
   width: 100%;
   background-color: var(--black);
   padding: 0.625rem 1.625rem;
@@ -96,12 +37,39 @@ body {
   cursor: pointer;
 }
 
+.btn span {
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.btn:hover .icon {
+  animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+}
+
 .btn:hover {
   opacity: 0.9;
 }
 
 .btn:focus {
   outline: solid 2px var(--silver);
+}
+
+@keyframes MoveUpInitial {
+	to {
+    transform: translate(105%, -105%);
+	}
+}
+
+@keyframes MoveUpEnd {
+	from {
+		transform: translate(-100%,100%);
+	}
+	to {
+		transform: translate(0,0);
+	}
 }
 
 .btn-row {
@@ -150,78 +118,6 @@ body {
   text-transform: capitalize;
 }
 
-.contact {
-  background-color: var(--white);
-  padding: 10rem 1rem;
-}
-
-.contact-form,
-.contact-text {
-  grid-column: span 2;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-text p {
-  line-height: 170%;
-  width: 80%;
-  margin-bottom: 2rem;
-}
-
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  gap: 1.625rem;
-}
-
-.contact-links li {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.contact-links li img {
-  opacity: 0.5;
-}
-
-.contact-links li a {
-  color: var(--black);
-}
-
-.contact-links li a:hover {
-  color: var(--silver);
-}
-
-.footer {
-  position: relative;
-  overflow: hidden;
-  color: var(--silver);
-  background-color: var(--black);
-  padding: 10rem 1rem;
-}
-
-.footer-img {
-  position: absolute;
-  bottom: 0;
-  left: 15%;
-  opacity: .5;
-  width: 300px;
-  height: 300px;
-  transform: rotate(15deg);
-}
-
-.footer-text {
-  position: relative;
-  z-index: 1;
-  grid-column: 3 / span 2;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
 
 @media (max-width: 850px) {
   .project {
@@ -282,3 +178,5 @@ body {
     grid-column: 1 / span 4;
   }
 }
+
+*/

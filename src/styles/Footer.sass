@@ -1,0 +1,29 @@
+@use 'base'
+  
+.Footer
+  background-color: base.$c09
+  overflow: hidden
+  position: relative
+
+  img
+    position: absolute
+    width: 16rem
+    height: 16rem
+    bottom: 0
+    left: 15%
+    opacity: 0.25
+    transform: rotate(15deg)
+
+  .text
+    grid-column-start: 2
+    position: relative
+    z-index: 5
+
+@media (max-width: 800px)
+  .Footer
+    img
+      left: initial
+      right: 15%
+      
+    .text
+      grid-column-start: 1

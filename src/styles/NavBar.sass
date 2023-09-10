@@ -1,0 +1,119 @@
+@use './base'
+
+@mixin background
+  background-color: rgba(base.$c08, 0.8)
+  backdrop-filter: blur(1rem)
+  -webkit-backdrop-filter: blur(1rem)
+  border-radius: 1rem
+  border-bottom: solid 2px base.$c08
+
+@mixin fullscreen
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.NavBar
+  width: base.$layout-width
+  padding: 0.625rem 1rem
+  position: fixed
+  z-index: 1000
+  top: 1rem
+  left: calc(50% - base.$layout-width / 2)
+  box-shadow: 0 0.25rem 0.5rem rgba(base.$c08, 0.25)
+  border-radius: 1rem
+  animation-name: navbar-anim
+  animation-duration: 0.5s
+  animation-timing-function: cubic-bezier(0, 0.19, 0.2, 0.97)
+  animation-fill-mode: both
+
+  a[href="hero"]
+    margin-right: auto
+
+  img
+    width: 1.5rem
+    height: 1.5rem
+
+  a
+    color: base.$c01
+    font-weight: 400
+    text-decoration: none
+    display: block
+    padding: 0.25rem 0.5rem
+
+  a:hover
+    color: base.$c03
+
+  .menu-btn
+    display: none
+    background-color: transparent
+  
+.NavBar_backdrop
+  @include fullscreen
+  position: fixed
+  z-index: 900
+  
+.NavBar::before
+  @include fullscreen
+  @include background
+  position: absolute
+  z-index: -1
+  content: ""
+  display: block
+
+@media (max-width: 800px)
+  .NavBar
+    left: 0
+    margin: 0 1rem
+    width: calc(100% - 2rem)
+    
+    .menu-btn
+      display: flex
+
+    nav
+      display: none
+
+    ul
+      flex-direction: column
+      align-items: stretch
+      gap: 1rem
+
+    .bar-1, .bar-2
+      transition: transform 0.3s ease-in-out
+      transform-origin: left
+
+  .NavBar.open
+    nav
+      @include background
+      display: block
+      width: 100%
+      position: absolute
+      top: calc(100% + 0.75rem)
+      left: 0
+      padding: 1rem
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25)
+      transform-origin: top center
+      animation-name: navbar-menu-anim
+      animation-duration: 0.3s
+      animation-timing-function: cubic-bezier(0, 0.19, 0.2, 0.97)
+
+    .bar-1
+      transform: translateY(-0.33rem) rotate(45deg)
+
+    .bar-2
+      transform: translateY(0.33rem) rotate(-45deg)
+
+@keyframes navbar-anim
+  from
+    transform: translateY(-4rem)
+  to
+    transform: translateY(0)
+
+@keyframes navbar-menu-anim
+  from
+    transform: translateY(-1rem)
+    opacity: 0
+  to
+    transform: translateY(0)
+    opacity: 1
+
