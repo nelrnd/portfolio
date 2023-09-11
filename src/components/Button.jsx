@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import arrowIcon from '../assets/arrow.svg'
+import { styled } from 'styled-components'
 
 const Button = ({ link, onClick, children }) => (
   link ? (

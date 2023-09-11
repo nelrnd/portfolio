@@ -2,6 +2,8 @@ import Project from '../components/Project'
 import chatPreview from '../assets/chat-preview.jpg';
 import twitterPreview from '../assets/twitter-preview.jpg';
 import weatherPreview from '../assets/weather-preview.jpg';
+import Section from '../components/Section';
+import { Flex, Heading2 } from '../components/elements';
 
 const projects = [
   {
@@ -31,14 +33,12 @@ const projects = [
 ]
 
 const Projects = () => (
-  <section id="projects">
-    <div className="content">
-      <h2 className='mb-2'>Projects</h2>
-      <div className='flex-col gap-4'>
-        {projects.map((project, id) => <Project key={id} project={project} />)}
-      </div>
-    </div>
-  </section>
+  <Section id="projects">
+    <Heading2>Projects</Heading2>
+    <Flex $col $gap="xl">
+      {projects.map((project, id) => <Project key={id} project={project} />)}
+    </Flex>
+  </Section>
 )
 
 export default Projects

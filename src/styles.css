@@ -1,0 +1,53 @@
+:root {
+  --color-1000: hsl(0, 0%, 0%);
+  --color-950: hsl(240, 10%, 5%);
+  --color-900: hsl(240, 10%, 10%);
+  --color-650: hsl(240, 10%, 35%);
+  --color-350: hsl(240, 10%, 65%);
+  --color-100: hsl(240, 10%, 90%);
+  --color-50: hsl(240, 10%, 95%);
+  --color-0: hsl(0, 0%, 100%);
+
+  --xxxl: 8rem;
+  --xxl: 4rem;
+  --xl: 2rem;
+  --l: 1.5rem;
+  --m: 1rem;
+  --s: 0.5rem;
+  --xs: 0.25rem;
+  --xxs: 0.125rem;
+
+  --font-stack: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --layout-width: min(1800px, 80vw);
+
+  font-size: clamp(16px, 1.7vw, 32px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-stack);
+}
+
+body {
+  background-color: var(--color-0);
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.icon, svg {
+  width: 1rem;
+  height: 1rem;
+}

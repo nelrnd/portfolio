@@ -1,9 +1,10 @@
+import Section from "../components/Section"
+import { Headline } from "../components/elements"
+
 const Hero = () => (
-  <section id="hero">
-    <div className="content">
-      <h1>Hi I&apos;m Nel<br />Web Developer</h1>
-    </div>
-  </section>
+  <Section id="hero">
+    <Headline>Hi, I&apos;m Nel<br/>Web Developer</Headline>
+  </Section>
 )
 
 export default Hero

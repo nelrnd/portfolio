@@ -13,6 +13,11 @@ const TextInput = ({ name, type, value, setValue }) => {
   )
 }
 
+
+const TextInput = ({type, name, value, setValue}) => (
+  <Text
+)
+
 TextInput.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,

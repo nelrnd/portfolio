@@ -2,7 +2,11 @@ import mailIcon from '../assets/mail.svg'
 import githubIcon from '../assets/github.svg';
 import twitterIcon from '../assets/twitter.svg';
 import '../styles/Contact.css';
+import Section from '../components/Section';
+import { Flex, Grid, Heading2, Link } from '../components/elements';
+import { useState } from 'react';
 
+/*
 const Contact = () => (
   <section id="contact">
     <div className="content">
@@ -35,6 +39,38 @@ const Contact = () => (
     </div>
   </section>
 )
+*/
+
+const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  return (
+    <Section id="contact">
+      <Heading2>Contact</Heading2>
+      <Grid>
+        <form action="#">
+
+        </form>
+        <Flex $col $gap="xl">
+          <Flex>
+            <img src={mailIcon} alt="email" />
+            <Link href="#">hello@nel.dev</Link>
+          </Flex>
+          <Flex>
+            <img src={githubIcon} />
+            <Link href="#">GitHub</Link>
+          </Flex>
+          <Flex>
+            <img src={twitterIcon} />
+            <Link href="#">Twitter</Link>
+          </Flex>
+        </Flex>
+      </Grid>
+    </Section>
+  )
+}
 
 export default Contact
 
