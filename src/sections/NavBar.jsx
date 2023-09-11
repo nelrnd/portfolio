@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import icon from '../assets/icon.svg';
 import '../styles/NavBar.css';
+import ThemeToggle from '../components/ThemeToggle';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ const NavBar = () => {
   return (
     <>
       <header className={`NavBar ${isOpen ? 'open' : ''}`}>
-        <div className="flex-row align spaced">
+        <div className="flex-row aligned spaced">
           <a href="#hero">
             <img src={icon} alt="Nel Renaudin" />
           </a>
@@ -31,6 +32,9 @@ const NavBar = () => {
               </li>
               <li>
                 <a href="#contact" onClick={close}>CONTACT</a>
+              </li>
+              <li>
+                <ThemeToggle />
               </li>
             </ul>
           </nav>

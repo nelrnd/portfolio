@@ -1,35 +1,42 @@
+.ThemeToggle {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
 
+.ThemeToggle input {
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  cursor: pointer;
+}
 
+.ThemeToggle .icons {
+  gap: 0.25rem;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: transform 0.3s ease-in-out;
+}
 
-.ThemeSwitch
-  margin: -0.25rem
-  width: 2rem
-  height: 2rem
-  border-radius: 0.5rem
-  position: relative
-  overflow: hidden
+.ThemeToggle img {
+  padding: 0.15rem;
+  transition: transform 0.3s ease-in-out;
+}
 
-  input[type="checkbox"]
-    width: 100%
-    height: 100%
-    appearance: none
-    cursor: pointer
+.dark .ThemeToggle .icons {
+  transform: translateY(-50%);
+}
 
-  .ThemeSwitch_icons
-    position: absolute
-    left: 0
-    top: 0
-    pointer-events: none
-    transition: transform 0.3s ease-in-out
+.dark .ThemeToggle img[alt="sun"] {
+  transform: scale(0.9) rotate(45deg);
+}
 
-  .ThemeSwitch_icons img
-    width: 2rem
-    height: 2rem
-    padding: 0.5rem
+.ThemeToggle img[alt="moon"] {
+  transform: scale(0.9) rotate(-45deg);
+}
 
-  input[type="checkbox"]:checked + .ThemeSwitch_icons
-    transform: translateY(-50%)
-
-.ThemeSwitch:hover
-  background-color: base.$c07
-  outline: solid 2px base.$c03
+.dark .ThemeToggle img[alt="moon"] {
+  transform: rotate(0);
+}
