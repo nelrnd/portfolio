@@ -40,6 +40,11 @@ const StyledNavBar = styled.header`
   img {
     100%;
   }
+
+  @media (max-width: 800px) {
+    width: 90vw;
+    left: calc(50% - 45vw);
+  }
 `;
 
 const NavBarIcon = styled.a`
@@ -55,9 +60,10 @@ const NavBarIcon = styled.a`
 const NavBarButton = styled.button`
   width: 2.5rem;
   height: 2.5rem;
+  margin: -0.1rem;
   border-radius: 0.5rem;
   border: none;
-  background-color: var(--color-900);
+  background-color: var(--color-1000);
   cursor: pointer;
 
   img, svg {
@@ -75,9 +81,6 @@ const NavBarButton = styled.button`
 `;
 
 const NavBarMenuButton = styled(NavBarButton)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   svg {
     width: 1.5rem;
@@ -166,7 +169,7 @@ const StyledThemeToggle = styled(NavBarButton)`
   .icons img {
     width: 100%;
     height: 100%;
-    padding: 0.5rem; 
+    padding: 0.5rem;
   }
 
   .dark & .icons {

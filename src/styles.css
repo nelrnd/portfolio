@@ -18,9 +18,9 @@
   --xxs: 0.125rem;
 
   --font-stack: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --layout-width: min(1800px, 80vw);
+  --layout-width: min(1200px, 70vw);
 
-  font-size: clamp(16px, 1.7vw, 32px);
+  font-size: clamp(16px, 1.5vw, 24px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
@@ -36,6 +36,10 @@
 
 body {
   background-color: var(--color-0);
+}
+
+body.dark {
+  background-color: var(--color-950);
 }
 
 ul, ol {

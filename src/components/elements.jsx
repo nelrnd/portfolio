@@ -5,6 +5,12 @@ const Headline = styled.h1`
   font-weight: 400;
   line-height: 120%;
   color: var(--color-950);
+  @media (max-width: 800px) {
+    font-size: 3rem;
+  }
+  .dark & {
+    color: var(--color-50);
+  }
 `;
 
 const Heading2 = styled.h2`
@@ -12,10 +18,19 @@ const Heading2 = styled.h2`
   font-weight: 700;
   line-height: 120%;
   color: var(--color-950);
+  @media (max-width: 800px) {
+    font-size: 2rem;
+  }
+  .dark & {
+    color: var(--color-50);
+  }
 `
 
 const Heading3 = styled(Heading2).attrs({ as: 'h3' })`
   font-size: 1.5rem;
+  @media (max-width: 800px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Text = styled.p`
@@ -24,6 +39,9 @@ const Text = styled.p`
   font-style: ${props => props.$italic ? 'italic' : 'normal'};
   line-height: 170%;
   color: var(--color-650);
+  .dark & {
+    color: var(--color-350);
+  }
 `;
 
 const Button = styled.button`
@@ -55,6 +73,12 @@ const Button = styled.button`
   &:focus {
     outline: solid 0.15rem var(--color-350);
   }
+
+  .dark & {
+    border: solid 0.15rem var(--color-350);
+    color: ${props => props.$primary ? 'var(--color-950)' : 'var(--color-50)'};
+    background-color: ${props => props.$primary ? 'var(--color-50)' : 'transparent'};
+  }
 `;
 
 const Link = styled.a`
@@ -65,19 +89,33 @@ const Link = styled.a`
   &:hover {
     color: var(--color-650);
   }
+
+  .dark & {
+    color: var(--color-100);
+  }
+
+  .dark &:hover {
+    color: var(--color-350);
+  }
 `;
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: ${props => props.$align ? 'center' : 'start'};
   gap: 1.25rem;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+  }
 `;
 
 const Flex = styled.div`
   display: flex;
   flex-direction: ${props => props.$col ? 'column' : 'row'};
   justify-content: ${props => props.$spaced ? 'space-between' : 'flex-start'};
-  align-items: center;
+  align-items: ${props => props.$col ? 'stretch' : 'center'};
   gap: ${props => `var(--${props.$gap || 'm'})`}
 `;
 

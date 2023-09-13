@@ -34,9 +34,11 @@ const projects = [
 
 const Projects = () => (
   <Section id="projects">
-    <Heading2>Projects</Heading2>
     <Flex $col $gap="xl">
-      {projects.map((project, id) => <Project key={id} project={project} />)}
+      <Heading2>Projects</Heading2>
+      <Flex $col $gap="xxl">
+        {projects.map((project, id) => <Project key={id} project={project} />)}
+      </Flex>
     </Flex>
   </Section>
 )

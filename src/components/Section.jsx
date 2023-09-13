@@ -2,16 +2,20 @@ import PropTypes from 'prop-types'
 import { styled } from 'styled-components';
 
 const StyledSection = styled.section`
-  padding-top: 8rem;
+  padding-top: 12rem;
 
   &:last-of-type {
-    padding-bottom: 8rem;
+    padding-bottom: 12rem;
   }
 `;
 
 const SectionContent = styled.div`
   width: var(--layout-width);
   margin: auto;
+
+  @media (max-width: 800px) {
+    width: 90vw;
+  }
 `;
 
 const Section = ({ id, children }) => (
@@ -28,3 +32,4 @@ Section.propTypes = {
 }
 
 export default Section;
+export { SectionContent };
