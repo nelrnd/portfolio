@@ -1,23 +1,50 @@
 {
-  "hash": "bb67449a",
-  "browserHash": "d26b1e9f",
+  "hash": "7efb9697",
+  "browserHash": "3544ac68",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "9ca5b619",
+      "fileHash": "febae8ab",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "4cd43fbd",
+      "fileHash": "f241f8a7",
+      "needsInterop": true
+    },
+    "react-responsive": {
+      "src": "../../node_modules/react-responsive/dist/react-responsive.js",
+      "file": "react-responsive.js",
+      "fileHash": "aa27f239",
+      "needsInterop": true
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "004adf21",
+      "needsInterop": false
+    },
+    "styled-components": {
+      "src": "../../node_modules/styled-components/dist/styled-components.browser.esm.js",
+      "file": "styled-components.js",
+      "fileHash": "17ec9386",
+      "needsInterop": false
+    },
+    "prop-types": {
+      "src": "../../node_modules/prop-types/index.js",
+      "file": "prop-types.js",
+      "fileHash": "b6e2cdb6",
       "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-HQYZZ6R6": {
-      "file": "chunk-HQYZZ6R6.js"
+    "chunk-2PA4WPI3": {
+      "file": "chunk-2PA4WPI3.js"
+    },
+    "chunk-ROME4SDB": {
+      "file": "chunk-ROME4SDB.js"
     }
   }
 }

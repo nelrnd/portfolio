@@ -1,5 +1,6 @@
-import PropTypes from 'prop-types'
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
+import { motion } from "framer-motion"
+import PropTypes from "prop-types"
 
 const StyledSection = styled.section`
   padding-top: 12rem;
@@ -9,7 +10,7 @@ const StyledSection = styled.section`
   }
 `;
 
-const SectionContent = styled.div`
+const SectionContent = styled(motion.div)`
   width: var(--layout-width);
   margin: auto;
 
@@ -18,9 +19,14 @@ const SectionContent = styled.div`
   }
 `;
 
+const content = {
+  offscreen: { y: 50, opacity: 0, scale: 0.99 },
+  onscreen: { y: 0, opacity: 1, scale: 1, transition: { duration: 0.5, type: 'easeIn' } },
+}
+
 const Section = ({ id, children }) => (
   <StyledSection id={id || ''}>
-    <SectionContent>
+    <SectionContent variants={content} initial="offscreen" whileInView="onscreen" viewport={{ once: true }}>
       {children}
     </SectionContent>
   </StyledSection>
