@@ -43,14 +43,14 @@ const HiddenLabel = styled.label`
 
 const TextInput = ({ type, name, placeholder, value, setValue }) => (
   <>
-    <HiddenLabel for={name}>{name}</HiddenLabel>
+    <HiddenLabel htmlFor={name}>{name}</HiddenLabel>
     <StyledTextInput type={type || 'text'} nale={name} id={name} value={value} placeholder={placeholder} onChange={(e) => setValue(e.target.value)} />
   </>
 )
 
 const TextArea = ({ name, placeholder, value, setValue}) => (
   <>
-    <HiddenLabel for={name}>{name}</HiddenLabel>
+    <HiddenLabel htmlFor={name}>{name}</HiddenLabel>
     <StyledTextArea name={name} id={name} value={value} placeholder={placeholder} onChange={(e) => setValue(e.target.value)}></StyledTextArea>
   </>
 )
