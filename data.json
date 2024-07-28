@@ -1,0 +1,32 @@
+{
+  "title": "Nel, Freelance website creator",
+  "hero": {
+    "heading": "Hi, I'm Nel\nFreelance website creator"
+  },
+  "projects": [
+    {
+      "title": "MiChat",
+      "desc": "A real-time chat app that allows to chat with other people, send images, create group chats, and more...",
+      "live": "https://chat.nel.dev/",
+      "code": "https://github.com/nelrnd/chat"
+    },
+    {
+      "title": "Twitter Clone",
+      "desc": "A clone of the famous Twitter social media. Includes all main app features like authentication, user profiles, following, liking and retweeting tweets, and more...",
+      "live": "https://twitterclone.nel.dev/",
+      "code": "https://github.com/nelrnd/twitter-clone"
+    },
+    {
+      "title": "Weather App",
+      "desc": "A weather app that fetch data from the OpenWeather API and display it in a nicely way.",
+      "live": "https://nelrnd.github.io/weather-app/",
+      "code": "https://github.com/nelrnd/weather-app"
+    }
+  ],
+  "about": "I like to create stunning and highly interactive websites that are optimized for search engine and that help you get real conversions. I handle everything, from design to code to production, which allows me to be blazingly fast in the process. I am passionate about creating memorable experiences through great design. Beside coding, I enjoy spending time in nature and with friends.",
+  "contact": {
+    "email": "hello@nel.dev",
+    "twitter": "@neldev_",
+    "github": "nelrnd"
+  }
+}

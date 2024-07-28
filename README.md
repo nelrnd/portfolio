@@ -1,2 +1,1 @@
-# portfolio
-My web developer portfolio
+My personal web developer portfolio

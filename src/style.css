@@ -1,0 +1,9 @@
+:root {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+body {
+  max-width: 900px;
+  line-height: 150%;
+}
