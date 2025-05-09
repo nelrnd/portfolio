@@ -1,4 +1,20 @@
 {
+  "name": "Nelson",
+  "footerTitle": "Nelson Renaudin | Freelance Web Developer",
+  "pages": [
+    {
+      "url": "/projects",
+      "name": "Projects"
+    },
+    {
+      "url": "/about",
+      "name": "About"
+    },
+    {
+      "url": "/contact",
+      "name": "Contact"
+    }
+  ],
   "heroTitle": "Hi, I'm Nelson, I design+code websites",
   "projects": [
     {
@@ -40,24 +56,24 @@
   ],
   "about": "Since I was little, I've had a passion for building things and learning something new along the way. I eventually settled on programming. I also love mountains and good design.",
   "contact": {
-    "email": "hello@nel.dev",
-    "socials": [
-      {
-        "name": "GitHub",
-        "url": "https://github.com/nelrnd"
-      },
-      {
-        "name": "Twitter",
-        "url": "https://x.com/neldev_"
-      },
-      {
-        "name": "LinkedIn",
-        "url": "https://www.linkedin.com/in/nelson-renaudin-222307210/"
-      },
-      {
-        "name": "AHSI",
-        "url": "https://social-media-lake-beta.vercel.app/"
-      }
-    ]
-  }
+    "email": "hello@nel.dev"
+  },
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/nelrnd"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://x.com/neldev_"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/nelson-renaudin-222307210/"
+    },
+    {
+      "name": "AHSI",
+      "url": "https://social-media-lake-beta.vercel.app/"
+    }
+  ]
 }

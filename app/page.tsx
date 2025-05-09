@@ -52,12 +52,12 @@ async function About() {
 }
 
 async function Contact() {
-  const { contact } = data
+  const { contact, socials } = data
   return (
     <section>
       <p>{contact.email}</p>
       <ul>
-        {contact.socials.map((social) => (
+        {socials.map((social) => (
           <li key={social.name}>
             <Link href={social.url} target="_blank">
               {social.name}
