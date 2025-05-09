@@ -27,11 +27,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-* {
-  @apply border-border;
-}
-
 @layer components {
+  * {
+    @apply border-border;
+  }
+
   .text-xxl {
     @apply text-[2rem]  md:text-[8rem];
   }
@@ -67,4 +67,10 @@ body {
   .btn-secondary {
     @apply border;
   }
+}
+
+#gradient-canvas {
+  --gradient-color-1: #2c35ff;
+  --gradient-color-2: #000000;
+  --gradient-color-3: #000000;
 }
