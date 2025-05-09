@@ -4,6 +4,7 @@ import Section from "@/components/section"
 import Tag from "@/components/tag"
 import data from "@/data.json"
 import { Project } from "@/lib/definitions"
+import Image from "next/image"
 import Link from "next/link"
 
 export default async function Page({
@@ -72,10 +73,12 @@ function ProjectInfo({ project }: { project: Project }) {
   )
 }
 
-function ProjectImage({ url }: { url?: string }) {
+function ProjectImage({ url, alt = "" }: { url?: string; alt?: string }) {
   return (
     <Section>
       <div className="bg-gray-200 h-[800px]"></div>
+
+      {url && <Image src={url} alt={alt} fill />}
     </Section>
   )
 }
