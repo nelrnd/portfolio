@@ -9,7 +9,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       <Card>
         <p>{project.year}</p>
         <h3>
-          {project.title} / ${project.subTitle}
+          {project.title} / {project.subTitle}
         </h3>
         <div>
           {project.tags.map((tag) => (

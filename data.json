@@ -57,7 +57,14 @@
       }
     }
   ],
-  "about": "Since I was little, I've had a passion for building things and learning something new along the way. I eventually settled on programming. I also love mountains and good design.",
+  "about": {
+    "copy": "Since I was little, I've had a passion for building things and learning something new along the way. I eventually settled on programming. I also love mountains and good design."
+  },
+  "cta": {
+    "text": "Wanna talk to me about an idea?",
+    "buttonText": "Let's connect",
+    "url": "/contact"
+  },
   "contact": {
     "email": "hello@nel.dev"
   },
