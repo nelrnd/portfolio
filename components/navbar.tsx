@@ -9,13 +9,15 @@ export default function Navbar() {
     <Section as="header" containerClassName="py-10">
       <nav>
         <ul className="flex items-center gap-8">
-          <li className="mr-auto">
+          <li className="mr-auto text-2xl">
             <Link href="/">{name}</Link>
           </li>
 
           {pages.map((page) => (
             <li key={page.url}>
-              <Link href={page.url}>{page.name}</Link>
+              <Link href={page.url} className="uppercase">
+                {page.name}
+              </Link>
             </li>
           ))}
         </ul>

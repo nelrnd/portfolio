@@ -9,7 +9,7 @@ export default async function Hero() {
       <h1 className="text-8x leading-[120%]">
         <span>{hero.title}</span>
         <br />
-        <span>{hero.subTitle}</span>
+        <span className="inline-block w-full text-right">{hero.subTitle}</span>
       </h1>
     </Section>
   )

@@ -46,10 +46,10 @@ export default async function Page({ params }: Props) {
 
 function ProjectInfo({ project }: { project: Project }) {
   return (
-    <Section>
+    <Section containerClassName="py-16">
       <Grid className="grid-cols-[1fr_auto]">
         <div>
-          <h1 className="text-8x leading-none">{project.title}</h1>
+          <h1 className="text-8x leading-[120%]">{project.title}</h1>
           <p className="text-leading mb-4">{project.subTitle}</p>
           <div className="flex items-center gap-3">
             {project.tags.map((tag) => (
@@ -57,14 +57,14 @@ function ProjectInfo({ project }: { project: Project }) {
             ))}
           </div>
         </div>
-        <div>
+        <div className="space-y-8">
           <div>
-            <p>Year</p>
+            <p className="title mb-2">Year</p>
             <p>{project.year}</p>
           </div>
           <div>
-            <p>Roles</p>
-            <ul>
+            <p className="title mb-2">Roles</p>
+            <ul className="space-y-1">
               {project.roles.map((role) => (
                 <li key={role}>{role}</li>
               ))}
@@ -72,11 +72,19 @@ function ProjectInfo({ project }: { project: Project }) {
           </div>
         </div>
       </Grid>
-      <Grid className="grid-cols-2">
-        <Link href={project.urls.live} target="_blank">
+      <Grid className="grid-cols-2 mt-8">
+        <Link
+          href={project.urls.live}
+          target="_blank"
+          className="btn btn-primary"
+        >
           Website
         </Link>
-        <Link href={project.urls.code} target="_blank">
+        <Link
+          href={project.urls.code}
+          target="_blank"
+          className="btn btn-secondary"
+        >
           Code
         </Link>
       </Grid>
@@ -97,7 +105,7 @@ function ProjectImage({ url, alt = "" }: { url?: string; alt?: string }) {
 function ProjectDescription({ desc }: { desc: string }) {
   return (
     <Section>
-      <p>{desc}</p>
+      <p className="text-4x leading-[170%] text-justify">{desc}</p>
     </Section>
   )
 }
@@ -105,7 +113,9 @@ function ProjectDescription({ desc }: { desc: string }) {
 function ProjectNext({ nextProject }: { nextProject: Project }) {
   return (
     <Section>
-      <Link href={`/work/${nextProject.slug}`}>Next project</Link>
+      <Link href={`/work/${nextProject.slug}`} className="text-4x">
+        Next project
+      </Link>
     </Section>
   )
 }
