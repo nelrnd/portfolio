@@ -15,7 +15,9 @@ export default async function Page() {
   return (
     <main>
       <Section>
-        <h1>{contact.title}</h1>
+        <h1 className="text-center text-6x leading-[120%] max-w-[900px] m-auto">
+          {contact.title}
+        </h1>
       </Section>
       <Section>
         <Grid className="grid-cols-2">

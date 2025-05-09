@@ -8,10 +8,10 @@ export default function ProjectCard({ project }: { project: Project }) {
     <Link href={`/work/${project.slug}`}>
       <Card>
         <p>{project.year}</p>
-        <h3>
+        <h3 className="text-2x mb-2">
           {project.title} / {project.subTitle}
         </h3>
-        <div>
+        <div className="flex items-center gap-3">
           {project.tags.map((tag) => (
             <Tag key={tag} content={tag} />
           ))}

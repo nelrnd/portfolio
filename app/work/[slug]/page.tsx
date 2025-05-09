@@ -49,9 +49,9 @@ function ProjectInfo({ project }: { project: Project }) {
     <Section>
       <Grid className="grid-cols-[1fr_auto]">
         <div>
-          <h1>{project.title}</h1>
-          <p>{project.subTitle}</p>
-          <div>
+          <h1 className="text-8x leading-none">{project.title}</h1>
+          <p className="text-leading mb-4">{project.subTitle}</p>
+          <div className="flex items-center gap-3">
             {project.tags.map((tag) => (
               <Tag key={tag} content={tag} />
             ))}
@@ -105,7 +105,7 @@ function ProjectDescription({ desc }: { desc: string }) {
 function ProjectNext({ nextProject }: { nextProject: Project }) {
   return (
     <Section>
-      <Link href={`/project/${nextProject.slug}`}>Next project</Link>
+      <Link href={`/work/${nextProject.slug}`}>Next project</Link>
     </Section>
   )
 }

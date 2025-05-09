@@ -6,7 +6,7 @@ export default async function About() {
 
   return (
     <Section>
-      <p>{about.copy}</p>
+      <p className="text-2x leading-[180%]">{about.copy}</p>
     </Section>
   )
 }

@@ -6,7 +6,7 @@ export default function Navbar() {
   const { name, pages } = data
 
   return (
-    <Section as="header">
+    <Section as="header" containerClassName="py-10">
       <nav>
         <ul className="flex items-center gap-8">
           <li className="mr-auto">

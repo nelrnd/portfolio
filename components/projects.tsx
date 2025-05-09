@@ -8,9 +8,9 @@ export default async function Projects() {
 
   return (
     <Section>
-      <h2>{projectsSectionTitle}</h2>
+      <h2 className="mb-6">{projectsSectionTitle}</h2>
 
-      <Grid className="grid-rows-[500px]">
+      <Grid>
         {projects.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}

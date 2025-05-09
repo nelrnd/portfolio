@@ -6,8 +6,11 @@ export default async function Hero() {
 
   return (
     <Section containerClassName="py-32">
-      <h1>{hero.title}</h1>
-      <p>{hero.subTitle}</p>
+      <h1 className="text-8x leading-[120%]">
+        <span>{hero.title}</span>
+        <br />
+        <span>{hero.subTitle}</span>
+      </h1>
     </Section>
   )
 }

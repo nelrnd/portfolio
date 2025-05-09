@@ -7,8 +7,10 @@ export default async function CTA() {
   return (
     <Section>
       <div className="flex justify-between items-center gap-8">
-        <p>{cta.text}</p>
-        <Link href={cta.url}>{cta.buttonText}</Link>
+        <p className="text-leading">{cta.text}</p>
+        <Link href={cta.url} className="btn">
+          {cta.buttonText}
+        </Link>
       </div>
     </Section>
   )
