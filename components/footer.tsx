@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <Section as="footer" containerClassName="py-16 space-y-8 border-t">
       <nav>
-        <ul className="flex items-center gap-8">
+        <ul className="flex flex-col md:flex-row items-center gap-8">
           <li className="mr-auto">
             <Link href="/">{name}</Link>
           </li>
@@ -18,11 +18,11 @@ export default function Footer() {
           ))}
         </ul>
       </nav>
-      <div className="flex justify-between items-center gap-8">
+      <div className="flex flex-wrap justify-between items-center gap-8">
         <p>
           © {getYear()} {footerTitle}
         </p>
-        <ul className="flex items-center gap-8">
+        <ul className="flex flex-col md:flex-row items-center gap-8">
           {socials.map((social) => (
             <li key={social.name}>
               <Link href={social.url} target="_blank">

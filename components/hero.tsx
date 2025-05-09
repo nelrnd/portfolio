@@ -6,7 +6,7 @@ export default async function Hero() {
 
   return (
     <Section containerClassName="py-32">
-      <h1 className="text-8x leading-[120%]">
+      <h1 className="text-xxl leading-[120%]">
         <span>{hero.title}</span>
         <br />
         <span className="inline-block w-full text-right">{hero.subTitle}</span>

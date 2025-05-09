@@ -47,17 +47,19 @@ export default async function Page({ params }: Props) {
 function ProjectInfo({ project }: { project: Project }) {
   return (
     <Section containerClassName="py-16">
-      <Grid className="grid-cols-[1fr_auto]">
+      <Grid className="md:grid-cols-[1fr_auto] gap-y-8">
         <div>
-          <h1 className="text-8x leading-[120%]">{project.title}</h1>
+          <h1 className="text-[3rem] md:text-[8rem] leading-[120%]">
+            {project.title}
+          </h1>
           <p className="text-leading mb-4">{project.subTitle}</p>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2 md:gap-3">
             {project.tags.map((tag) => (
               <Tag key={tag} content={tag} />
             ))}
           </div>
         </div>
-        <div className="space-y-8">
+        <Grid className="grid-cols-2 md:grid-cols-1 gap-8">
           <div>
             <p className="title mb-2">Year</p>
             <p>{project.year}</p>
@@ -70,7 +72,7 @@ function ProjectInfo({ project }: { project: Project }) {
               ))}
             </ul>
           </div>
-        </div>
+        </Grid>
       </Grid>
       <Grid className="grid-cols-2 mt-8">
         <Link
@@ -95,7 +97,7 @@ function ProjectInfo({ project }: { project: Project }) {
 function ProjectImage({ url, alt = "" }: { url?: string; alt?: string }) {
   return (
     <Section>
-      <div className="bg-gray-200 h-[800px]"></div>
+      <div className="bg-gray-200 aspect-[4/3]"></div>
 
       {url && <Image src={url} alt={alt} fill />}
     </Section>
@@ -105,7 +107,7 @@ function ProjectImage({ url, alt = "" }: { url?: string; alt?: string }) {
 function ProjectDescription({ desc }: { desc: string }) {
   return (
     <Section>
-      <p className="text-4x leading-[170%] text-justify">{desc}</p>
+      <p className="lg:text-[4rem] leading-[170%] text-justify">{desc}</p>
     </Section>
   )
 }
@@ -113,7 +115,10 @@ function ProjectDescription({ desc }: { desc: string }) {
 function ProjectNext({ nextProject }: { nextProject: Project }) {
   return (
     <Section>
-      <Link href={`/work/${nextProject.slug}`} className="text-4x">
+      <Link
+        href={`/work/${nextProject.slug}`}
+        className="text-[1.5rem] lg:text-[4rem]"
+      >
         Next project
       </Link>
     </Section>

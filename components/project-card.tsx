@@ -6,7 +6,7 @@ import Tag from "./tag"
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={`/work/${project.slug}`}>
-      <Card>
+      <Card className="h-[450px]">
         <p>{project.year}</p>
         <h3 className="text-2x mb-2">
           {project.title} / {project.subTitle}

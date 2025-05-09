@@ -32,8 +32,8 @@ body {
 }
 
 @layer components {
-  .text-8x {
-    @apply text-[8rem];
+  .text-xxl {
+    @apply text-[2rem]  md:text-[8rem];
   }
 
   .text-6x {
