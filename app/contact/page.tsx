@@ -3,6 +3,11 @@ import ContactInfo from "@/components/contact-info"
 import Grid from "@/components/grid"
 import Section from "@/components/section"
 import data from "@/data.json"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Contact",
+}
 
 export default async function Page() {
   const { contact } = data

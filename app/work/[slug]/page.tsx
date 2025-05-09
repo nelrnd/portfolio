@@ -4,14 +4,25 @@ import Section from "@/components/section"
 import Tag from "@/components/tag"
 import data from "@/data.json"
 import { Project } from "@/lib/definitions"
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 
-export default async function Page({
-  params,
-}: {
+type Props = {
   params: Promise<{ slug: string }>
-}) {
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const project = data.projects.find((project) => project.slug === slug)
+  return {
+    title: project?.title,
+    description: project?.desc,
+    keywords: project?.tags,
+  }
+}
+
+export default async function Page({ params }: Props) {
   const { slug } = await params
   const index = data.projects.findIndex((project) => project.slug === slug)
   const project = data.projects[index]

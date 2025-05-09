@@ -1,21 +1,19 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Space_Grotesk } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-grotesk",
   subsets: ["latin"],
 })
 
 export const metadata: Metadata = {
-  title: "Nelson Web Developer Portfolio",
+  title: {
+    template: "%s | Nelson Renaudin",
+    default: "Nelson Renaudin | Freelance Web Developer",
+  },
   description: "Portfolio of Nelson Renaudin, Full-stack web developer",
 }
 
@@ -26,9 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${spaceGrotesk.className} antialiased`}>
         <Navbar />
         {children}
         <Footer />

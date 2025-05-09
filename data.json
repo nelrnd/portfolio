@@ -38,7 +38,7 @@
       "title": "BooChat",
       "year": 2024,
       "subTitle": "Real-time chat app",
-      "desc": "BooChat is a real-time chat application ",
+      "desc": "BooChat is a real-time chat application",
       "tags": ["Socket.io", "React", "Express", "PassportJS"],
       "roles": ["UX/UI Developer", "Frontend developer", "Backend developer"],
       "urls": {
