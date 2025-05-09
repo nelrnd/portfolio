@@ -1,0 +1,63 @@
+{
+  "heroTitle": "Hi, I'm Nelson, I design+code websites",
+  "projects": [
+    {
+      "slug": "ahsi",
+      "title": "AHSI",
+      "year": 2025,
+      "subTitle": "Social media app",
+      "desc": "AHSI is a fully featured social media web app. People can create an account, post stuff, search for and follow other people, like and comment posts.",
+      "tags": ["Next.js", "React", "PostgreSQL", "Tailwindcss"],
+      "urls": {
+        "live": "https://ahsi.nel.dev",
+        "code": "https://github.com/nelrnd/social-media"
+      }
+    },
+    {
+      "slug": "boochat",
+      "title": "BooChat",
+      "year": 2024,
+      "subTitle": "Real-time chat app",
+      "desc": "BooChat is a real-time chat application ",
+      "tags": ["Socket.io", "React", "Express", "PassportJS"],
+      "urls": {
+        "live": "https://chat.nel.dev",
+        "code": "https://github.com/nelrnd/chat"
+      }
+    },
+    {
+      "slug": "opwear",
+      "title": "OpWear",
+      "year": 2024,
+      "subTitle": "E-commerce website",
+      "desc": "OpWear is an e-commerce store for a high-end clothing store. Shop through collections and navigate to product pages, add products to cart and proceed to checkout.",
+      "tags": ["Node.js", "Express", "React", "MongoDB"],
+      "urls": {
+        "live": "https://store.nel.dev",
+        "code": "https://github.com/nelrnd/ecommerce"
+      }
+    }
+  ],
+  "about": "Since I was little, I've had a passion for building things and learning something new along the way. I eventually settled on programming. I also love mountains and good design.",
+  "contact": {
+    "email": "hello@nel.dev",
+    "socials": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/nelrnd"
+      },
+      {
+        "name": "Twitter",
+        "url": "https://x.com/neldev_"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/nelson-renaudin-222307210/"
+      },
+      {
+        "name": "AHSI",
+        "url": "https://social-media-lake-beta.vercel.app/"
+      }
+    ]
+  }
+}
