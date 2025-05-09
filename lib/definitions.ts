@@ -5,6 +5,7 @@ export type Project = {
   subTitle: string
   desc: string
   tags: string[]
+  roles: string[]
   urls: {
     live: string
     code: string

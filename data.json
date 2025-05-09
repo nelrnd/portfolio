@@ -2,8 +2,8 @@
   "name": "Nelson",
   "pages": [
     {
-      "url": "/projects",
-      "name": "Projects"
+      "url": "/work",
+      "name": "Work"
     },
     {
       "url": "/about",
@@ -18,7 +18,7 @@
     "title": "Hi, I'm Nelson",
     "subTitle": "I design+code websites"
   },
-  "projectsSectionTitle": "Selected projects",
+  "projectsSectionTitle": "Selected work",
   "projects": [
     {
       "slug": "ahsi",
@@ -27,6 +27,7 @@
       "subTitle": "Social media app",
       "desc": "AHSI is a fully featured social media web app. People can create an account, post stuff, search for and follow other people, like and comment posts.",
       "tags": ["Next.js", "React", "PostgreSQL", "Tailwindcss"],
+      "roles": ["UX/UI Developer", "Frontend developer", "Backend developer"],
       "urls": {
         "live": "https://ahsi.nel.dev",
         "code": "https://github.com/nelrnd/social-media"
@@ -39,6 +40,7 @@
       "subTitle": "Real-time chat app",
       "desc": "BooChat is a real-time chat application ",
       "tags": ["Socket.io", "React", "Express", "PassportJS"],
+      "roles": ["UX/UI Developer", "Frontend developer", "Backend developer"],
       "urls": {
         "live": "https://chat.nel.dev",
         "code": "https://github.com/nelrnd/chat"
@@ -51,6 +53,7 @@
       "subTitle": "E-commerce website",
       "desc": "OpWear is an e-commerce store for a high-end clothing store. Shop through collections and navigate to product pages, add products to cart and proceed to checkout.",
       "tags": ["Node.js", "Express", "React", "MongoDB"],
+      "roles": ["UX/UI Developer", "Frontend developer", "Backend developer"],
       "urls": {
         "live": "https://store.nel.dev",
         "code": "https://github.com/nelrnd/ecommerce"
