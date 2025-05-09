@@ -7,7 +7,7 @@ export default function Footer() {
   const { name, pages, footerTitle, socials } = data
 
   return (
-    <Section as="footer" className="border p-8" containerClassName="space-y-8">
+    <Section as="footer" containerClassName="space-y-8">
       <nav>
         <ul className="flex items-center gap-8">
           <li className="mr-auto">

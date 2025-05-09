@@ -1,3 +1,5 @@
+import Hero from "@/components/hero"
+import Projects from "@/components/projects"
 import data from "@/data.json"
 import Link from "next/link"
 
@@ -9,36 +11,6 @@ export default async function Home() {
       <About />
       <Contact />
     </main>
-  )
-}
-
-async function Hero() {
-  const { heroTitle } = data
-
-  return (
-    <section>
-      <h1>{heroTitle}</h1>
-    </section>
-  )
-}
-
-async function Projects() {
-  const { projects } = data
-
-  return (
-    <section>
-      {projects.map((project) => (
-        <div key={project.slug}>
-          <h3>{project.title}</h3>
-          <p>{project.subTitle}</p>
-          <ul>
-            {project.tags.map((tag) => (
-              <li key={tag}>{tag}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </section>
   )
 }
 

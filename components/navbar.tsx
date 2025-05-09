@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <Section as="header">
-      <nav className="border p-8">
+      <nav>
         <ul className="flex items-center gap-8">
           <li className="mr-auto">
             <Link href="/">{name}</Link>

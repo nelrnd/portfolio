@@ -1,6 +1,5 @@
 {
   "name": "Nelson",
-  "footerTitle": "Nelson Renaudin | Freelance Web Developer",
   "pages": [
     {
       "url": "/projects",
@@ -15,7 +14,11 @@
       "name": "Contact"
     }
   ],
-  "heroTitle": "Hi, I'm Nelson, I design+code websites",
+  "hero": {
+    "title": "Hi, I'm Nelson",
+    "subTitle": "I design+code websites"
+  },
+  "projectsSectionTitle": "Selected projects",
   "projects": [
     {
       "slug": "ahsi",
@@ -75,5 +78,6 @@
       "name": "AHSI",
       "url": "https://social-media-lake-beta.vercel.app/"
     }
-  ]
+  ],
+  "footerTitle": "Nelson Renaudin | Freelance Web Developer"
 }

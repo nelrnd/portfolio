@@ -13,7 +13,7 @@ export default function Section({
 }) {
   const Comp = as || "section"
   return (
-    <Comp className={cn("", className)}>
+    <Comp className={cn("border p-8", className)}>
       <div className={cn("", containerClassName)}>{children}</div>
     </Comp>
   )
