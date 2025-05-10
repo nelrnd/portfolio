@@ -4,6 +4,7 @@ import "./globals.css"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import GradientBackground from "@/components/gradient-background"
+import ReactLenis from "lenis/react"
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-grotesk",
@@ -24,15 +25,17 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${spaceGrotesk.className} antialiased`}>
-        <div className="relative z-10">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
-        <GradientBackground />
-      </body>
-    </html>
+    <ReactLenis root>
+      <html lang="en">
+        <body className={`${spaceGrotesk.className} antialiased`}>
+          <div className="relative z-10">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+          <GradientBackground />
+        </body>
+      </html>
+    </ReactLenis>
   )
 }
