@@ -15,7 +15,7 @@ export default async function Page() {
   return (
     <main>
       <Section>
-        <h1 className="text-center text-6x leading-[120%] max-w-[900px] m-auto">
+        <h1 className="text-center text-[2rem] md:text-[4rem] lg:text-[6rem] leading-[120%] max-w-[900px] m-auto">
           {contact.title}
         </h1>
       </Section>

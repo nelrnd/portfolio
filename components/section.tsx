@@ -13,8 +13,13 @@ export default function Section({
 }) {
   const Comp = as || "section"
   return (
-    <Comp className={cn("px-4 md:px-8", className)}>
-      <div className={cn("max-w-container m-auto py-32", containerClassName)}>
+    <Comp className={cn("px-4 sm:px-8", className)}>
+      <div
+        className={cn(
+          "max-w-container m-auto py-16 md:py-32",
+          containerClassName
+        )}
+      >
         {children}
       </div>
     </Comp>
