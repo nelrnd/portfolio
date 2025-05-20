@@ -28,14 +28,13 @@
         "year": 2025,
         "roles": ["UX/UI designer", "Frontend developer", "Backend developer"],
         "tags": ["Next.js", "Tailwind CSS", "NextAuth", "Prisma"],
-        "thumbnail": "/project-thumbnail.png",
+        "thumbnail": "/ahsi-thumbnail.png",
         "links": {
           "website": "https://ahsi.nel.dev/",
           "code": "https://github.com/nelrnd/social-media"
         },
         "desc": "AHSI is a feature-rich social networking platform built with Next.js that delivers an intuitive user experience. This full-stack application allows users to create accounts, post text and photo content, interact through likes and comments, and discover new people via a search system. User can browser other people's profile and follow them. Users receive notifications when receiving new likes and comments on their posts, or when someone starts following them. Leveraging modern web development practices, AHSI delivers a responsive design that works flawlessly across all devices, while maintaining robust performance through optimized server-side rendering."
       },
-
       {
         "slug": "opwear",
         "title": "OpWear",
@@ -43,7 +42,7 @@
         "year": 2024,
         "roles": ["UX/UI designer", "Frontend developer", "Backend developer"],
         "tags": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-        "thumbnail": "/project-thumbnail.png",
+        "thumbnail": "/opwear-thumbnail.png",
         "links": {
           "website": "https://store.nel.dev/",
           "code": "https://github.com/nelrnd/ecommerce"
@@ -57,7 +56,7 @@
         "year": 2024,
         "roles": ["UX/UI designer", "Frontend developer", "Backend developer"],
         "tags": ["React", "Node.js", "Express", "Socket.io", "Passport.js"],
-        "thumbnail": "/project-thumbnail.png",
+        "thumbnail": "/ahsi-thumbnail.png",
         "links": {
           "website": "https://chat.nel.dev/",
           "code": "https://github.com/nelrnd/chat"
@@ -66,6 +65,7 @@
       }
     ]
   },
+  "mission": "I build **powerful, interactive websites** that are lightning-fast, rank high on Google, and **turn visitors into paying customers**. My standout advantage? Exceptional efficiency. I deliver your complete, custom website in just **3 days**, guaranteeing a rapid launch without compromising on performance or results.",
   "about": {
     "copy": "Since I was little, I've had a passion for building things and learning something new along the way. I eventually settled on programming. I also love mountains and good design."
   },
@@ -74,14 +74,9 @@
     "buttonText": "Let's connect",
     "url": "/contact"
   },
+
   "contact": {
-    "title": "Wanna talk to me about an idea?",
-    "contacts": [
-      {
-        "name": "hello@nel.dev",
-        "url": "mailto:hello@nel.dev"
-      }
-    ]
+    "email": "contact@nel.dev"
   },
   "socials": [
     {
@@ -95,11 +90,7 @@
     {
       "name": "LinkedIn",
       "url": "https://www.linkedin.com/in/nelson-renaudin-222307210/"
-    },
-    {
-      "name": "AHSI",
-      "url": "https://social-media-lake-beta.vercel.app/"
     }
   ],
-  "footerTitle": "Nelson Renaudin | Freelance Web Developer"
+  "footerTitle": "Nelson Renaudin, Freelance Web Developer"
 }

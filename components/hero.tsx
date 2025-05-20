@@ -2,8 +2,6 @@
 
 import data from "@/data.json"
 import Section from "./section"
-import AnimatedText from "./animated-text"
-import { useEffect } from "react"
 import { useGSAP } from "@gsap/react"
 import { SplitText } from "gsap/SplitText"
 import gsap from "gsap"
@@ -13,10 +11,10 @@ export default function Hero() {
     const split = SplitText.create(".split", { type: "words", mask: "words" })
 
     gsap.from(split.words, {
-      duration: 0.5,
+      duration: 0.4,
       y: 200,
       opacity: 0,
-      stagger: 0.2,
+      stagger: 0.15,
     })
   })
 

@@ -1,6 +1,7 @@
 import About from "@/components/about"
 import CTA from "@/components/cta"
 import Hero from "@/components/hero"
+import Mission from "@/components/mission"
 import { ProjectList } from "@/components/project"
 
 export default async function Home() {
@@ -8,6 +9,7 @@ export default async function Home() {
     <main>
       <Hero />
       <ProjectList />
+      <Mission />
       <About />
       <CTA />
     </main>
