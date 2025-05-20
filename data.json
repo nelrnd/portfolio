@@ -19,7 +19,7 @@
     "subTitle": "I build websites"
   },
   "projects": {
-    "title": "Here's some of my work:",
+    "title": "Here's some of my work",
     "content": [
       {
         "slug": "ahsi",
@@ -28,11 +28,27 @@
         "year": 2025,
         "roles": ["UX/UI designer", "Frontend developer", "Backend developer"],
         "tags": ["Next.js", "Tailwind CSS", "NextAuth", "Prisma"],
+        "thumbnail": "/project-thumbnail.png",
         "links": {
           "website": "https://ahsi.nel.dev/",
           "code": "https://github.com/nelrnd/social-media"
         },
         "desc": "AHSI is a feature-rich social networking platform built with Next.js that delivers an intuitive user experience. This full-stack application allows users to create accounts, post text and photo content, interact through likes and comments, and discover new people via a search system. User can browser other people's profile and follow them. Users receive notifications when receiving new likes and comments on their posts, or when someone starts following them. Leveraging modern web development practices, AHSI delivers a responsive design that works flawlessly across all devices, while maintaining robust performance through optimized server-side rendering."
+      },
+
+      {
+        "slug": "opwear",
+        "title": "OpWear",
+        "subTitle": "E-Commerce Store",
+        "year": 2024,
+        "roles": ["UX/UI designer", "Frontend developer", "Backend developer"],
+        "tags": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+        "thumbnail": "/project-thumbnail.png",
+        "links": {
+          "website": "https://store.nel.dev/",
+          "code": "https://github.com/nelrnd/ecommerce"
+        },
+        "desc": "OpWear is a sophisticated e-commerce platform specializing in high-end streetwear fashion. This comprehensive online store enables customers to browse an extensive collection organized by categories and brands. Users can easily add products to their shopping cart and create personalized wishlists after registering for an account. The platform features an intuitive search system that helps shoppers quickly find specific items. Behind the scenes, OpWear includes a robust admin interface where authorized personnel can manage the entire product ecosystem—adding, editing, and removing categories, brands, and individual items. Through thoughtful UX design and efficient database management, OpWear delivers a seamless shopping experience for streetwear enthusiasts while providing powerful inventory control tools for business operations."
       },
       {
         "slug": "boochat",
@@ -40,32 +56,13 @@
         "subTitle": "Live Chat App",
         "year": 2024,
         "roles": ["UX/UI designer", "Frontend developer", "Backend developer"],
-        "tags": [
-          "React",
-          "Node",
-          "Express",
-          "Socket.io",
-          "MongoDB",
-          "Passport.js"
-        ],
+        "tags": ["React", "Node.js", "Express", "Socket.io", "Passport.js"],
+        "thumbnail": "/project-thumbnail.png",
         "links": {
           "website": "https://chat.nel.dev/",
           "code": "https://github.com/nelrnd/chat"
         },
         "desc": "BooChat is a dynamic real-time messaging platform built with React, Express, and Socket.io that provides seamless communication experiences. This full-stack application harnesses the power of WebSockets to enable instant message delivery and status updates. Users can create personal accounts, search for contacts, initiate one-on-one conversations, establish group chats, and share images effortlessly. The interface offers intuitive real-time indicators showing when contacts are online or actively typing in a conversation. BooChat enhances the social experience with interactive elements, including an embedded tic-tac-toe game that friends can enjoy while chatting. Through thoughtful implementation of modern web technologies, BooChat delivers responsive performance across devices while maintaining secure and reliable connections for all communications."
-      },
-      {
-        "slug": "opwear",
-        "title": "OpWear",
-        "subTitle": "E-Commerce Store",
-        "year": 2024,
-        "roles": ["UX/UI designer", "Frontend developer", "Backend developer"],
-        "tags": ["React", "Node", "Express", "MongoDB", "Tailwind CSS"],
-        "links": {
-          "website": "https://store.nel.dev/",
-          "code": "https://github.com/nelrnd/ecommerce"
-        },
-        "desc": "OpWear is a sophisticated e-commerce platform specializing in high-end streetwear fashion. This comprehensive online store enables customers to browse an extensive collection organized by categories and brands. Users can easily add products to their shopping cart and create personalized wishlists after registering for an account. The platform features an intuitive search system that helps shoppers quickly find specific items. Behind the scenes, OpWear includes a robust admin interface where authorized personnel can manage the entire product ecosystem—adding, editing, and removing categories, brands, and individual items. Through thoughtful UX design and efficient database management, OpWear delivers a seamless shopping experience for streetwear enthusiasts while providing powerful inventory control tools for business operations."
       }
     ]
   },

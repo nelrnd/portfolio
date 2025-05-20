@@ -1,4 +1,4 @@
-import Projects from "@/components/projects"
+import { ProjectList } from "@/components/project"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default async function Page() {
   return (
     <main>
-      <Projects />
+      <ProjectList />
     </main>
   )
 }

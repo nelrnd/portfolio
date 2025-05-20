@@ -3,7 +3,7 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  --border: #ffffff;
+  --border: grey;
   --subtle: #787878;
   --container: 1100px;
 }

@@ -6,6 +6,7 @@ export type Project = {
   tags: string[]
   roles: string[]
   desc: string
+  thumbnail: string
   links: {
     website: string
     code: string

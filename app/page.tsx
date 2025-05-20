@@ -1,13 +1,13 @@
 import About from "@/components/about"
 import CTA from "@/components/cta"
 import Hero from "@/components/hero"
-import Projects from "@/components/projects"
+import { ProjectList } from "@/components/project"
 
 export default async function Home() {
   return (
     <main>
       <Hero />
-      <Projects />
+      <ProjectList />
       <About />
       <CTA />
     </main>
