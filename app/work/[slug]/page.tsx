@@ -14,7 +14,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const project = data.projects.find((project) => project.slug === slug)
+  const project = data.projects.content.find((project) => project.slug === slug)
   return {
     title: project?.title,
     description: project?.desc,
@@ -24,10 +24,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { slug } = await params
-  const index = data.projects.findIndex((project) => project.slug === slug)
-  const project = data.projects[index]
-  const nextIndex = index + 1 < data.projects.length ? index + 1 : 0
-  const nextProject = data.projects[nextIndex]
+  const index = data.projects.content.findIndex(
+    (project) => project.slug === slug
+  )
+  const project = data.projects.content[index]
+  const nextIndex = index + 1 < data.projects.content.length ? index + 1 : 0
+  const nextProject = data.projects.content[nextIndex]
 
   if (!project) return <p>Project not found</p>
 
@@ -76,14 +78,14 @@ function ProjectInfo({ project }: { project: Project }) {
       </Grid>
       <Grid className="grid-cols-2 mt-8">
         <Link
-          href={project.urls.live}
+          href={project.links.website}
           target="_blank"
           className="btn btn-primary"
         >
           Website
         </Link>
         <Link
-          href={project.urls.code}
+          href={project.links.code}
           target="_blank"
           className="btn btn-secondary"
         >
@@ -107,7 +109,7 @@ function ProjectImage({ url, alt = "" }: { url?: string; alt?: string }) {
 function ProjectDescription({ desc }: { desc: string }) {
   return (
     <Section>
-      <p className="lg:text-[4rem] leading-[170%] text-justify">{desc}</p>
+      <p className="lg:text-[2.5rem] leading-[170%]">{desc}</p>
     </Section>
   )
 }

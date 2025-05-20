@@ -20,7 +20,7 @@ export default async function Page() {
         </h1>
       </Section>
       <Section>
-        <Grid className="grid-cols-2">
+        <Grid className="lg:grid-cols-2 gap-120">
           <ContactForm />
           <ContactInfo />
         </Grid>

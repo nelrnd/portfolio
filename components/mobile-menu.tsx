@@ -19,7 +19,10 @@ export default function MobileMenu() {
 
   return (
     <div>
-      <button onClick={toggleOpen} className="cursor-pointer relative z-50">
+      <button
+        onClick={toggleOpen}
+        className="cursor-pointer relative z-50 size-8"
+      >
         <MenuIcon open={open} />
       </button>
 
@@ -39,11 +42,13 @@ function MenuIcon({ open }: { open: boolean }) {
         y: open ? 4 : 0,
         rotate: open ? -45 : 0,
         transformOrigin: "50% 50%",
+        duration: 0.3,
       })
       gsap.to(bars[1], {
         y: open ? -4 : 0,
         rotate: open ? 45 : 0,
         transformOrigin: "50% 50%",
+        duration: 0.3,
       })
     },
     { dependencies: [open], scope: container }
@@ -75,13 +80,13 @@ function MenuSheet({
   const sheetRef = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
-    gsap.to(sheetRef.current, { xPercent: open ? -100 : 0 })
+    gsap.to(sheetRef.current, { xPercent: open ? -100 : 0, duration: 0.4 })
   }, [open])
 
   return (
     <div
       ref={sheetRef}
-      className="fixed top-0 left-0 w-full h-full bg-background/80 backdrop-blur-2xl translate-x-full"
+      className="fixed z-40 top-0 left-0 w-full h-full bg-background/80 backdrop-blur-2xl translate-x-full"
     >
       <nav className="p-16 pt-32">
         <ul className="space-y-8">

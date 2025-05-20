@@ -5,10 +5,10 @@ export default function ContactInfo() {
   const { contact, socials } = data
 
   return (
-    <div>
+    <div className="space-y-8">
       <div>
-        <h3>Contact details</h3>
-        <ul>
+        <h3 className="title mb-2">Contact details</h3>
+        <ul className="space-y-2">
           {contact.contacts.map((contact) => (
             <li key={contact.name}>
               <Link href={contact.url}>{contact.name}</Link>
@@ -17,8 +17,8 @@ export default function ContactInfo() {
         </ul>
       </div>
       <div>
-        <h3>Socials</h3>
-        <ul>
+        <h3 className="title mb-2">Socials</h3>
+        <ul className="space-y-2">
           {socials.map((social) => (
             <li key={social.name}>
               <Link href={social.url} target="_blank">

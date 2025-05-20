@@ -1,13 +1,13 @@
 export type Project = {
   slug: string
   title: string
-  year: number
   subTitle: string
-  desc: string
+  year: number
   tags: string[]
   roles: string[]
-  urls: {
-    live: string
+  desc: string
+  links: {
+    website: string
     code: string
   }
 }

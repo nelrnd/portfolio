@@ -4,14 +4,14 @@ import Section from "./section"
 import data from "@/data.json"
 
 export default async function Projects() {
-  const { projectsSectionTitle, projects } = data
+  const { projects } = data
 
   return (
     <Section>
-      <h2 className="mb-6">{projectsSectionTitle}</h2>
+      <h2 className="mb-6">{projects.title}</h2>
 
       <Grid>
-        {projects.map((project) => (
+        {projects.content.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}
       </Grid>

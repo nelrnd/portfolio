@@ -9,15 +9,17 @@ export default function Navbar() {
   return (
     <Section
       as="header"
-      containerClassName="py-0 h-[4rem] sm:h-[5.625rem] flex items-center justify-center"
+      containerClassName="py-0 md:py-0 h-[80px] flex items-center justify-center"
     >
       <nav className="flex-1">
         <ul className="flex items-center gap-8">
-          <li className="mr-auto text-xl sm:text-2xl">
-            <Link href="/">{name}</Link>
+          <li className="mr-auto">
+            <Link href="/" className="p-1 uppercase text-xl">
+              {name}
+            </Link>
           </li>
 
-          <div className="hidden sm:flex sm:items-center sm:gap-8 relative top-[2px]">
+          <div className="hidden sm:flex items-center gap-8 relative top-[2px]">
             {pages.map((page) => (
               <li key={page.url}>
                 <Link href={page.url} className="p-1 uppercase">
@@ -27,7 +29,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="block sm:hidden size-8">
+          <div className="block sm:hidden h-8">
             <MobileMenu />
           </div>
         </ul>
