@@ -43,7 +43,9 @@ export function ProjectList() {
 
   return (
     <Section>
-      <h2 className="text-[2.5rem] mb-[3.75rem]">{title}</h2>
+      <h2 className="text-base mb-[1.875rem] sm:text-[1.875rem] sm:mb-[3.75rem] lg:text-[2.5rem] lg:mb-[5rem]">
+        {title}
+      </h2>
 
       <Grid className="gap-[3.75rem]">
         {content.map((project) => (

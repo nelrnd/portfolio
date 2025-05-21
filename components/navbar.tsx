@@ -9,7 +9,8 @@ export default function Navbar() {
   return (
     <Section
       as="header"
-      containerClassName="py-0 md:py-0 h-[80px] flex items-center justify-center"
+      className="py-0 sm:py-0 lg:py-0"
+      containerClassName="h-[80px] flex items-center justify-center"
     >
       <nav className="flex-1">
         <ul className="flex items-center gap-8">

@@ -3,8 +3,8 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  --border: grey;
-  --subtle: #787878;
+  --soft: #a7a7a7;
+  --border: #333333;
   --container: 1100px;
 }
 
@@ -17,8 +17,8 @@ body {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-soft: var(--soft);
   --color-border: var(--border);
-  --color-subtle: var(--subtle);
   --container-container: var(--container);
   --font-sans: var(--font-grotesk);
 }
@@ -49,7 +49,7 @@ body {
   }
 
   .title {
-    @apply text-xs uppercase text-subtle;
+    @apply text-xs uppercase text-soft;
   }
 
   .btn {

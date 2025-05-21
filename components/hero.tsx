@@ -21,7 +21,7 @@ export default function Hero() {
   const { hero } = data
 
   return (
-    <Section containerClassName="py-32">
+    <Section>
       <h1 className="text-xxl space-y-6 split">
         <span className="inline-block">{hero.title}</span>
         <span className="inline-block w-full text-right">{hero.subTitle}</span>
