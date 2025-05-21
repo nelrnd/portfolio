@@ -65,7 +65,10 @@
       }
     ]
   },
-  "mission": "I build **powerful, interactive websites** that are lightning-fast, rank high on Google, and **turn visitors into paying customers**. My standout advantage? Exceptional efficiency. I deliver your complete, custom website in just **3 days**, guaranteeing a rapid launch without compromising on performance or results.",
+  "mission": {
+    "large": "I build **powerful, interactive websites** that are lightning-fast, rank high on Google, and **turn visitors into paying customers**. My standout advantage? Exceptional efficiency. I deliver your complete, custom website in just **3 days**, guaranteeing a rapid launch without compromising on performance or results.",
+    "small": "I build **powerful, interactive websites** that are lightning-fast, rank high on Google, and **turn visitors into paying customers**. My standout advantage? Exceptional efficiency. I deliver your complete, custom website in just **3 days**."
+  },
   "about": {
     "copy": "Since I was little, I've had a passion for building things and learning something new along the way. I eventually settled on programming. I also love mountains and good design."
   },

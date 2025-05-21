@@ -7,7 +7,10 @@ export default function Mission() {
 
   return (
     <Section>
-      <p className="text-[2.5rem] leading-[160%]">{formatText(mission)}</p>
+      <p className="hidden sm:block text-2xl lg:text-[2.5rem] leading-[170%]">
+        {formatText(mission.large)}
+      </p>
+      <p className="leading-[170%] sm:hidden">{formatText(mission.small)}</p>
     </Section>
   )
 }

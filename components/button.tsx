@@ -1,5 +1,3 @@
-import { ButtonHTMLAttributes } from "react"
-
 export default function Button({
   children,
   ...props
@@ -9,7 +7,7 @@ export default function Button({
   return (
     <button
       className={
-        "text-xl px-[2.5rem] py-[1.25rem] w-fit rounded-[0.25rem] border border-border cursor-pointer"
+        "px-8 py-4 sm:text-xl sm:px-[2.5rem] sm:py-[1.25rem] w-fit rounded-[0.25rem] border border-border cursor-pointer"
       }
       {...props}
     >

@@ -10,15 +10,15 @@ import Image from "next/image"
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={`/work/${project.slug}`}>
-      <div className="h-[400px] rounded-[2rem] border border-border relative">
-        <div className="h-full p-[3.125rem] flex flex-col justify-between">
-          <p>{project.year}</p>
+      <div className="h-[400px] rounded-3xl sm:rounded-[2rem] bg-background/80 border border-border relative">
+        <div className="h-full p-4 py-8 sm:p-[3.125rem] flex flex-col justify-between relative z-20">
+          <p className="text-sm sm:text-base">{project.year}</p>
 
           <div className="space-y-5">
-            <h3 className="text-[2.5rem]">
+            <h3 className="text-2xl sm:text-[2.5rem]">
               {project.title} / {project.subTitle}
             </h3>
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4">
               {project.tags.map((tag) => (
                 <Tag key={tag} content={tag} />
               ))}
@@ -31,7 +31,7 @@ export function ProjectCard({ project }: { project: Project }) {
           width={716}
           height={400}
           alt={`${project.title} / ${project.subTitle}`}
-          className="absolute bottom-0 right-0 -z-10"
+          className="absolute bottom-0 right-0 z-10 opacity-80 lg:opacity-100"
         />
       </div>
     </Link>
@@ -47,7 +47,7 @@ export function ProjectList() {
         {title}
       </h2>
 
-      <Grid className="gap-[3.75rem]">
+      <Grid className="gap-[1.875rem] sm:gap-[3.75rem]">
         {content.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}

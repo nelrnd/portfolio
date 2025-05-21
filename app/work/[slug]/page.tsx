@@ -1,4 +1,3 @@
-import CTA from "@/components/cta"
 import Grid from "@/components/grid"
 import Section from "@/components/section"
 import Tag from "@/components/tag"
@@ -41,7 +40,6 @@ export default async function Page({ params }: Props) {
       <ProjectImage />
       <ProjectImage />
       <ProjectNext nextProject={nextProject} />
-      <CTA />
     </main>
   )
 }
