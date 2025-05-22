@@ -2,6 +2,7 @@ import Link from "next/link"
 import data from "@/data.json"
 import Section from "./section"
 import MobileMenu from "./mobile-menu"
+import TextWave from "./text-wave"
 
 export default function Navbar() {
   const { name, pages } = data
@@ -16,7 +17,7 @@ export default function Navbar() {
         <ul className="flex items-center gap-8">
           <li className="mr-auto">
             <Link href="/" className="p-1 uppercase text-xl">
-              {name}
+              <TextWave text={name} />
             </Link>
           </li>
 
@@ -24,7 +25,7 @@ export default function Navbar() {
             {pages.map((page) => (
               <li key={page.url}>
                 <Link href={page.url} className="p-1 uppercase">
-                  {page.name}
+                  <TextWave text={page.name} />
                 </Link>
               </li>
             ))}
