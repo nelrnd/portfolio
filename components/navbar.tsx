@@ -138,7 +138,11 @@ function MenuSheet({
   const sheetRef = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
-    gsap.to(sheetRef.current, { x: open ? 0 : "100%", duration: 0.4 })
+    gsap.to(sheetRef.current, {
+      x: open ? 0 : "100%",
+      duration: 0.4,
+      ease: open ? "power4.out" : "power4.in",
+    })
   }, [open])
 
   return (

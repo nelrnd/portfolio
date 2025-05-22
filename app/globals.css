@@ -63,6 +63,10 @@ body {
   .btn-secondary {
     @apply border;
   }
+
+  .hero-text {
+    font-size: clamp(1rem, 10vw, 8rem);
+  }
 }
 
 #gradient-canvas {
