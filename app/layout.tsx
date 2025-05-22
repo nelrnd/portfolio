@@ -38,7 +38,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </div>
-          <GradientBackground />
+          {/* <GradientBackground /> */}
         </body>
       </html>
     </ReactLenis>

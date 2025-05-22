@@ -95,5 +95,18 @@
       "url": "https://www.linkedin.com/in/nelson-renaudin-222307210/"
     }
   ],
-  "footerTitle": "Nelson Renaudin, Freelance Web Developer"
+  "footerTitle": "Nelson Renaudin, Freelance Web Developer",
+  "personalInfo": {
+    "location": "Paris, FRANCE",
+    "timezone": "Europe/Paris",
+    "status": "Available for work"
+  },
+  "results": {
+    "title": "What you'll get",
+    "content": [
+      "A professional website that showcases your brand and builds instant credibility with your target audience.",
+      "Strategic conversion pathways that transform visitors into customers, delivering measurable results for your business.",
+      "Effective SEO implementation that boosts your search rankings and drives valuable organic traffic without ongoing ad costs."
+    ]
+  }
 }
