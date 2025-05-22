@@ -1,10 +1,11 @@
 "use client"
 
+import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { SplitText } from "gsap/SplitText"
-import { useLayoutEffect, useRef } from "react"
+import { useRef } from "react"
 
-export default function TextWave({ text }: { text: string }) {
+export default function WaveText({ text }: { text: string }) {
   const textRef = useRef<HTMLDivElement>(null)
   let text1: globalThis.SplitText
   let text2: globalThis.SplitText
@@ -19,7 +20,7 @@ export default function TextWave({ text }: { text: string }) {
     gsap.to(text2.chars, { yPercent: 0, stagger: 0.01 })
   }
 
-  useLayoutEffect(() => {
+  useGSAP(() => {
     if (textRef.current) {
       text1 = SplitText.create(textRef.current.firstElementChild, {
         type: "chars",
@@ -34,13 +35,14 @@ export default function TextWave({ text }: { text: string }) {
     <div
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className="w-fit relative overflow-hidden"
-      ref={textRef}
+      className="w-fit p-1"
     >
-      <p className="w-fit">{text}</p>
-      <p aria-hidden className="w-fit absolute">
-        {text}
-      </p>
+      <div ref={textRef} className="w-fit relative overflow-hidden">
+        <p className="w-fit">{text}</p>
+        <p aria-hidden className="w-fit absolute select-none">
+          {text}
+        </p>
+      </div>
     </div>
   )
 }

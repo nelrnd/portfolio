@@ -2,7 +2,7 @@ import Link from "next/link"
 import data from "@/data.json"
 import Section from "./section"
 import MobileMenu from "./mobile-menu"
-import TextWave from "./text-wave"
+import WaveText from "./wave-text"
 
 export default function Navbar() {
   const { name, pages } = data
@@ -16,16 +16,16 @@ export default function Navbar() {
       <nav className="flex-1">
         <ul className="flex items-center gap-8">
           <li className="mr-auto">
-            <Link href="/" className="p-1 uppercase text-xl">
-              <TextWave text={name} />
+            <Link href="/" className="block uppercase text-xl">
+              <WaveText text={name} />
             </Link>
           </li>
 
           <div className="hidden sm:flex items-center gap-8 relative top-[2px]">
             {pages.map((page) => (
               <li key={page.url}>
-                <Link href={page.url} className="p-1 uppercase">
-                  <TextWave text={page.name} />
+                <Link href={page.url} className="block uppercase">
+                  <WaveText text={page.name} />
                 </Link>
               </li>
             ))}

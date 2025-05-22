@@ -3,7 +3,6 @@ import { Space_Grotesk } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import GradientBackground from "@/components/gradient-background"
 import ReactLenis from "lenis/react"
 import gsap from "gsap"
 
@@ -38,7 +37,6 @@ export default function RootLayout({
             {children}
             <Footer />
           </div>
-          {/* <GradientBackground /> */}
         </body>
       </html>
     </ReactLenis>

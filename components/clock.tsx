@@ -13,7 +13,7 @@ export default function Clock({ timezone }: { timezone: string }) {
   const [time, setTime] = useState(getTime(timezone))
 
   useEffect(() => {
-    let interval = setInterval(() => {
+    const interval = setInterval(() => {
       const time = getTime(timezone)
       setTime(time)
     }, 1000)
