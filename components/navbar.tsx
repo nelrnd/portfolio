@@ -141,7 +141,7 @@ function MenuSheet({
     gsap.to(sheetRef.current, {
       x: open ? 0 : "100%",
       duration: 0.4,
-      ease: open ? "power4.out" : "power4.in",
+      ease: open ? "power1.out" : "power1.in",
     })
   }, [open])
 
