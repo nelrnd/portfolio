@@ -10,7 +10,7 @@ import Image from "next/image"
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={`/work/${project.slug}`}>
-      <div className="h-[400px] rounded-3xl sm:rounded-[2rem] bg-background/80 border border-border relative">
+      <div className="h-[400px] rounded-3xl sm:rounded-[2rem] bg-background/80 border border-border hover:border-soft transition-colors relative">
         <div className="h-full p-4 py-8 sm:p-[3.125rem] flex flex-col justify-between relative z-20">
           <p className="text-sm sm:text-base">{project.year}</p>
 
