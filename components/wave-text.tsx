@@ -16,17 +16,21 @@ export default function WaveText({ text }: WaveTextProps) {
   )
 
   const { contextSafe } = useGSAP(() => {
-    if (!containerRef.current) return
+    document.fonts.ready.then(() => {
+      if (!containerRef.current) return
 
-    const text = containerRef.current.firstElementChild as HTMLElement
-    const subtext = containerRef.current.lastElementChild as HTMLElement
+      const text = containerRef.current.firstElementChild as HTMLElement
+      const subtext = containerRef.current.lastElementChild as HTMLElement
 
-    if (text && subtext) {
-      splitInstancesRef.current.text = SplitText.create(text, { type: "chars" })
-      splitInstancesRef.current.subtext = SplitText.create(subtext, {
-        type: "chars",
-      })
-    }
+      if (text && subtext) {
+        splitInstancesRef.current.text = SplitText.create(text, {
+          type: "chars",
+        })
+        splitInstancesRef.current.subtext = SplitText.create(subtext, {
+          type: "chars",
+        })
+      }
+    })
   })
 
   const handleMouseEnter = contextSafe(() => {
