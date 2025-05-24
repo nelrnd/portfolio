@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import ReactLenis from "lenis/react"
 import gsap from "gsap"
+import ScrollTop from "@/components/scroll-top"
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-grotesk",
@@ -36,6 +37,7 @@ export default function RootLayout({
             <Navbar />
             {children}
             <Footer />
+            <ScrollTop />
           </div>
         </body>
       </html>

@@ -82,7 +82,7 @@ export default function Navbar() {
         </nav>
       </Section>
 
-      <div className="block sm:hidden h-8">
+      <div className="block sm:hidden">
         <MenuSheet open={open} closeMenu={() => setOpen(false)} />
       </div>
     </>

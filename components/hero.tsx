@@ -21,18 +21,18 @@ export default function Hero() {
         .timeline()
         .to(container.current, { opacity: 100, duration: 0.2 })
         .from(line1Words, {
-          duration: 0.6,
+          duration: 1,
           y: 200,
           opacity: 0,
           stagger: 0.15,
-          ease: "power1.out",
+          ease: "power4.out",
         })
         .from(line2Words, {
-          duration: 0.6,
+          duration: 1,
           y: 200,
           opacity: 0,
           stagger: 0.15,
-          ease: "power1.out",
+          ease: "power4.out",
         })
     },
     { scope: container }

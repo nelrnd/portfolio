@@ -3,6 +3,7 @@ import Section from "@/components/section"
 import Tag from "@/components/tag"
 import data from "@/data.json"
 import { Project } from "@/lib/definitions"
+import { ArrowUpIcon, ChevronRightIcon } from "@heroicons/react/16/solid"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -34,8 +35,8 @@ export default async function Page({ params }: Props) {
 
   return (
     <main>
-      <ProjectInfo project={project} />
       <ProjectImage />
+      <ProjectInfo project={project} />
       <ProjectDescription desc={project.desc} />
       <ProjectImage />
       <ProjectImage />
@@ -46,49 +47,52 @@ export default async function Page({ params }: Props) {
 
 function ProjectInfo({ project }: { project: Project }) {
   return (
-    <Section containerClassName="py-16">
-      <Grid className="md:grid-cols-[1fr_auto] gap-y-8">
-        <div>
-          <h1 className="text-[3rem] md:text-[8rem] leading-[120%]">
+    <Section as="header" className="py-4 sm:py-8 lg:py-8">
+      <Grid className="gap-6 sm:grid-cols-12 items-start">
+        <div className="sm:col-span-8 lg:col-span-9">
+          <h1 className="text-[2rem] sm:text-[5rem] lg:text-[8rem] leading-[120%] mb-1">
             {project.title}
           </h1>
-          <p className="text-leading mb-4">{project.subTitle}</p>
-          <div className="flex flex-wrap items-center gap-2 md:gap-3">
-            {project.tags.map((tag) => (
-              <Tag key={tag} content={tag} />
-            ))}
-          </div>
+          <p>{project.subTitle}</p>
         </div>
-        <Grid className="grid-cols-2 md:grid-cols-1 gap-8">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-4 sm:gap-y-3 sm:col-span-4 lg:col-span-6">
+          {project.tags.map((tag) => (
+            <Tag key={tag} content={tag} />
+          ))}
+        </div>
+        <Grid className="grid-cols-2 sm:col-span-8 lg:col-span-6">
           <div>
-            <p className="title mb-2">Year</p>
+            <h3 className="title mb-3">Year</h3>
             <p>{project.year}</p>
           </div>
           <div>
-            <p className="title mb-2">Roles</p>
-            <ul className="space-y-1">
+            <h3 className="title mb-3">Roles</h3>
+            <ul>
               {project.roles.map((role) => (
                 <li key={role}>{role}</li>
               ))}
             </ul>
           </div>
         </Grid>
-      </Grid>
-      <Grid className="grid-cols-2 mt-8">
-        <Link
-          href={project.links.website}
-          target="_blank"
-          className="btn btn-primary"
-        >
-          Website
-        </Link>
-        <Link
-          href={project.links.code}
-          target="_blank"
-          className="btn btn-secondary"
-        >
-          Code
-        </Link>
+
+        <div className="flex flex-col gap-3 sm:row-start-1 sm:col-span-4 sm:-col-start-5 lg:col-span-3 lg:-col-start-4 sm:self-center">
+          <Link
+            href={project.links.website}
+            target="_blank"
+            className="btn btn-primary"
+          >
+            <span className="flex-1">Website</span>
+            <ArrowUpIcon className="size-[1em] rotate-45" />
+          </Link>
+          <Link
+            href={project.links.code}
+            target="_blank"
+            className="btn btn-secondary"
+          >
+            <span className="flex-1">Code</span>
+            <ArrowUpIcon className="size-[1em] rotate-45" />
+          </Link>
+        </div>
       </Grid>
     </Section>
   )
@@ -96,8 +100,8 @@ function ProjectInfo({ project }: { project: Project }) {
 
 function ProjectImage({ url, alt = "" }: { url?: string; alt?: string }) {
   return (
-    <Section>
-      <div className="bg-gray-200 aspect-[4/3]"></div>
+    <Section className="py-4 sm:py-8 lg:py-8">
+      <div className="bg-gray-200 aspect-[16/9]"></div>
 
       {url && <Image src={url} alt={alt} fill />}
     </Section>
@@ -117,9 +121,10 @@ function ProjectNext({ nextProject }: { nextProject: Project }) {
     <Section>
       <Link
         href={`/work/${nextProject.slug}`}
-        className="text-[1.5rem] lg:text-[4rem]"
+        className="btn btn-secondary btn-large w-fit m-auto"
       >
-        Next project
+        Next work
+        <ChevronRightIcon className="size-[0.75em]" />
       </Link>
     </Section>
   )

@@ -65,7 +65,17 @@
       }
     ]
   },
-  "mission": "I build **powerful, interactive websites** that are lightning-fast, rank high on Google, and **turn visitors into paying customers**. My standout advantage? Exceptional efficiency. I deliver your complete, custom website in just **3 days**.",
+  "marketing": {
+    "stance": "I build **powerful, interactive websites** that are lightning-fast, rank high on Google, and **turn visitors into paying customers**. My standout advantage? Exceptional efficiency. I deliver your complete, custom website in just **3 days**.",
+    "results": {
+      "title": "What you'll get:",
+      "content": [
+        "A professional website that showcases your brand and builds instant credibility with your target audience.",
+        "Strategic conversion pathways that transform visitors into customers, delivering measurable results for your business.",
+        "Effective SEO implementation that boosts your search rankings and drives valuable organic traffic without ongoing ad costs."
+      ]
+    }
+  },
   "about": {
     "copy": "Since I was little, I've had a passion for building things and learning something new along the way. I eventually settled on programming. I also love mountains and good design."
   },
@@ -97,13 +107,5 @@
     "location": "Paris, FRANCE",
     "timezone": "Europe/Paris",
     "status": "Available for work"
-  },
-  "results": {
-    "title": "What you'll get",
-    "content": [
-      "A professional website that showcases your brand and builds instant credibility with your target audience.",
-      "Strategic conversion pathways that transform visitors into customers, delivering measurable results for your business.",
-      "Effective SEO implementation that boosts your search rankings and drives valuable organic traffic without ongoing ad costs."
-    ]
   }
 }

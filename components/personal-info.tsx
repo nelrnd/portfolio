@@ -9,7 +9,7 @@ export default function PersonalInfo() {
   const { location, timezone, status } = data.personalInfo
   return (
     <Section>
-      <Grid className="sm:grid-cols-2 bg-background border border-border rounded-2xl px-8 py-12 sm:p-[3.125rem]">
+      <Grid className="sm:grid-cols-2 bg-background border border-border rounded-2xl px-8 py-12 sm:p-[3.125rem] overflow-hidden">
         <div className="space-y-8 sm:space-y-16">
           <div>
             <h4 className="uppercase text-soft text-xs lg:text-base mb-1">

@@ -10,12 +10,10 @@ export default function GradientBackground() {
   }, [])
 
   return (
-    <div className="opacity-50">
-      <canvas
-        id="gradient-canvas"
-        data-transition-in
-        className="fixed top-0 left-0 w-full h-full"
-      />
-    </div>
+    <canvas
+      id="gradient-canvas"
+      data-transition-in
+      className="absolute top-0 left-0 w-full h-full"
+    />
   )
 }

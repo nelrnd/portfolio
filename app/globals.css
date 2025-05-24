@@ -53,7 +53,11 @@ body {
   }
 
   .btn {
-    @apply px-8 py-4 rounded-xl text-center;
+    @apply px-8 py-3 sm:py-4 rounded-xl flex justify-center items-center gap-3;
+  }
+
+  .btn-large {
+    @apply text-[1.5rem] lg:text-[4rem] lg:px-16 lg:py-8;
   }
 
   .btn-primary {
