@@ -136,8 +136,10 @@ function ProjectImage({ url, alt = "" }: { url?: string; alt?: string }) {
 
 function ProjectDescription({ desc }: { desc: string }) {
   return (
-    <Section className="py-4 sm:py-8 lg:py-8">
-      <p className="lg:text-[2.5rem] leading-[170%]">{desc}</p>
+    <Section className="py-0 sm:py-0 lg:py-0">
+      <Grid className="md:grid-cols-2">
+        <p className="leading-[180%]">{desc}</p>
+      </Grid>
     </Section>
   )
 }
