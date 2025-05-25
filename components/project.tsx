@@ -41,27 +41,21 @@ export function ProjectCard({ project }: { project: Project }) {
 }
 
 export function ProjectList() {
-  const { title, content } = data.projects
+  const { content } = data.projects
 
   return (
-    <Section>
-      <h2 className="text-base mb-[1.875rem] sm:text-[1.875rem] sm:mb-[3.75rem] lg:text-[2.5rem] lg:mb-[5rem]">
-        {title}
-      </h2>
+    <Grid className="gap-[1.875rem] sm:gap-[3.75rem]">
+      {content.map((project) => (
+        <ProjectCard key={project.slug} project={project} />
+      ))}
 
-      <Grid className="gap-[1.875rem] sm:gap-[3.75rem]">
-        {content.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
-        ))}
-
-        <a
-          className="px-8 py-4 sm:text-xl sm:px-[2.5rem] sm:py-[1.25rem] w-fit rounded-[0.25rem] border border-border cursor-pointer m-auto"
-          href="https://github.com/nelrnd?tab=repositories"
-          target="_blank"
-        >
-          View more
-        </a>
-      </Grid>
-    </Section>
+      <a
+        className="px-8 py-4 sm:text-xl sm:px-[2.5rem] sm:py-[1.25rem] w-fit rounded-[0.25rem] border border-border cursor-pointer m-auto"
+        href="https://github.com/nelrnd?tab=repositories"
+        target="_blank"
+      >
+        View more
+      </a>
+    </Grid>
   )
 }

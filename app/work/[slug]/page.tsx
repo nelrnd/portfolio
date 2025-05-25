@@ -1,3 +1,4 @@
+import AnimatedHeading from "@/components/animated-heading"
 import Grid from "@/components/grid"
 import Section from "@/components/section"
 import Tag from "@/components/tag"
@@ -50,9 +51,9 @@ function ProjectInfo({ project }: { project: Project }) {
     <Section as="header" className="py-4 sm:py-8 lg:py-8">
       <Grid className="gap-6 sm:grid-cols-12 items-start">
         <div className="sm:col-span-8 lg:col-span-9">
-          <h1 className="text-[2rem] sm:text-[5rem] lg:text-[8rem] leading-[120%] mb-1">
+          <AnimatedHeading className="text-[2rem] sm:text-[5rem] lg:text-[8rem] leading-[120%] mb-1">
             {project.title}
-          </h1>
+          </AnimatedHeading>
           <p>{project.subTitle}</p>
         </div>
         <div className="flex flex-wrap items-center gap-2 sm:gap-4 sm:gap-y-3 sm:col-span-4 lg:col-span-6">
