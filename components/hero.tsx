@@ -20,7 +20,7 @@ export default function Hero() {
         .from(
           line1Words,
           {
-            duration: 1,
+            duration: 1.25,
             y: 200,
             opacity: 0,
             stagger: 0.15,
@@ -31,7 +31,7 @@ export default function Hero() {
         .from(
           line2Words,
           {
-            duration: 1,
+            duration: 1.25,
             y: 200,
             opacity: 0,
             stagger: 0.15,
