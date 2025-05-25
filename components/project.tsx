@@ -26,13 +26,15 @@ export function ProjectCard({ project }: { project: Project }) {
           </div>
         </div>
 
-        <Image
-          src={project.thumbnail}
-          width={716}
-          height={400}
-          alt={`${project.title} / ${project.subTitle}`}
-          className="absolute bottom-0 right-0 z-10 opacity-80 lg:opacity-100"
-        />
+        <div className="absolute top-[24px] sm:top-auto sm:bottom-0 right-0 z-10 opacity-80 lg:opacity-100">
+          <div className="h-[16px] bg-linear-to-b from-background/0 to-background absolute bottom-0 left-0 w-full sm:opacity-50" />
+          <Image
+            src={project.thumbnail}
+            width={716}
+            height={400}
+            alt={`${project.title} / ${project.subTitle}`}
+          />
+        </div>
       </div>
     </Link>
   )
