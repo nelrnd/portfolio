@@ -24,7 +24,7 @@ export default function Hero() {
             y: 200,
             opacity: 0,
             stagger: 0.15,
-            ease: "back",
+            ease: "power4.out",
           },
           0
         )
@@ -35,9 +35,9 @@ export default function Hero() {
             y: 200,
             opacity: 0,
             stagger: 0.15,
-            ease: "back",
+            ease: "power4.out",
           },
-          1
+          0.3
         )
     },
     { scope: container }

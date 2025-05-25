@@ -7,6 +7,7 @@ import WaveText from "./wave-text"
 import { useGSAP } from "@gsap/react"
 import { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
+import { usePathname } from "next/navigation"
 
 export default function Navbar() {
   const { name, pages } = data
@@ -14,6 +15,7 @@ export default function Navbar() {
   const lastSrollTop = useRef(0)
   const [visible, setVisible] = useState(true)
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
 
   const onScroll = () => {
     if (open) return
@@ -43,6 +45,12 @@ export default function Navbar() {
     document.addEventListener("scroll", onScroll)
     return () => document.removeEventListener("scroll", onScroll)
   }, [onScroll])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setVisible(true)
+    }, 10)
+  }, [pathname])
 
   return (
     <>

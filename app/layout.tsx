@@ -39,10 +39,10 @@ export default function RootLayout({
             <Navbar />
             {children}
             <Footer />
-            <ScrollTop />
           </div>
         </body>
       </html>
+      <ScrollTop />
     </ReactLenis>
   )
 }

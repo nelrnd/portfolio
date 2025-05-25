@@ -13,7 +13,7 @@ export default function Marketing() {
   const { stance, results } = data.marketing
 
   return (
-    <Section>
+    <Section className="overflow-hidden">
       <div className="mb-[2rem] sm:mb-[4rem]">
         <p className="sm:text-2xl lg:text-[2.5rem] leading-[170%]">
           {formatText(stance)}
@@ -51,6 +51,7 @@ function Result({
   useGSAP(() => {
     gsap.from(card.current, {
       x: isEven ? 200 : -200,
+      opacity: 0,
       scrollTrigger: {
         trigger: container.current,
         start: "top bottom",
@@ -64,9 +65,9 @@ function Result({
     <div className="group" ref={container}>
       <div
         ref={card}
-        className="relative group-even:ml-auto z-10 p-8 sm:text-2xl lg:text-[2.5rem] leading-[170%] border border-border w-[60vw] sm:h-[400px] flex items-end"
+        className="relative group-even:ml-auto z-10 p-8 sm:text-2xl lg:text-[2.5rem] leading-[170%] border border-border sm:w-[80vw] lg:w-[60vw] lg:min-h-[400px] flex items-end"
       >
-        <p className="w-5/6">{children}</p>
+        <p className="sm:w-5/6">{children}</p>
       </div>
     </div>
   )
