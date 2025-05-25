@@ -29,6 +29,11 @@
         "roles": ["UX/UI designer", "Frontend developer", "Backend developer"],
         "tags": ["Next.js", "Tailwind CSS", "NextAuth", "Prisma"],
         "thumbnail": "/ahsi-thumbnail.png",
+        "gradient": {
+          "from": "#31194A",
+          "to": "#070022"
+        },
+        "images": ["/ahsi_1.jpg", "/ahsi_2.jpg", "/ahsi_3.jpg"],
         "links": {
           "website": "https://ahsi.nel.dev/",
           "code": "https://github.com/nelrnd/social-media"
@@ -42,7 +47,23 @@
         "year": 2024,
         "roles": ["UX/UI designer", "Frontend developer", "Backend developer"],
         "tags": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+        "gradient": {
+          "from": "#9B806B",
+          "to": "#47372B"
+        },
         "thumbnail": "/opwear-thumbnail.png",
+        "images": [
+          "/opwear_1.jpg",
+          "/opwear_2.jpg",
+          "/opwear_3.jpg",
+          "/opwear_4.jpg",
+          "/opwear_5.jpg",
+          "/opwear_6.jpg",
+          "/opwear_7.jpg",
+          "/opwear_8.jpg",
+          "/opwear_9.jpg",
+          "/opwear_10.jpg"
+        ],
         "links": {
           "website": "https://store.nel.dev/",
           "code": "https://github.com/nelrnd/ecommerce"
@@ -56,7 +77,20 @@
         "year": 2024,
         "roles": ["UX/UI designer", "Frontend developer", "Backend developer"],
         "tags": ["React", "Node.js", "Express", "Socket.io", "Passport.js"],
+        "gradient": {
+          "from": "#4A87D7",
+          "to": "#352CC3"
+        },
         "thumbnail": "/boochat-thumbnail.png",
+        "images": [
+          "/boochat_1.jpg",
+          "/boochat_2.jpg",
+          "/boochat_3.jpg",
+          "/boochat_4.jpg",
+          "/boochat_5.jpg",
+          "/boochat_6.jpg",
+          "/boochat_7.jpg"
+        ],
         "links": {
           "website": "https://chat.nel.dev/",
           "code": "https://github.com/nelrnd/chat"
@@ -76,9 +110,7 @@
       ]
     }
   },
-  "about": {
-    "copy": "Since I was little, I've had a passion for building things and learning something new along the way. I eventually settled on programming. I also love mountains and good design."
-  },
+  "about": "From stop motion animation with my LEGOs at 11 to doing 3d render of my Minecraft world, I've always had a passion for creating stuff on my computer. When I stumbled upon design and programming, I really liked it and decided to made it my job. From that day, I help businesses thrive in the digital world and increase sales. I also enjoy adventure, good design, and nature.",
   "cta": {
     "text": "Wanna talk to me about an idea?",
     "buttonText": "Let's connect",

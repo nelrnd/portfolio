@@ -36,11 +36,36 @@ export default async function Page({ params }: Props) {
 
   return (
     <main>
-      <ProjectImage />
+      {project.images && project.images.length > 0 && (
+        <Section className="py-4 sm:py-8 lg:py-8">
+          <div
+            className="p-4 h-[300px] sm:h-[500px] sm:p-8 flex justify-center items-center rounded-2xl"
+            style={{
+              background: `linear-gradient(145deg, ${project.gradient.from}, ${project.gradient.to})`,
+            }}
+          >
+            <Image
+              src={project.images[0]}
+              width={720}
+              height={450}
+              alt=""
+              className="shadow max-h-full w-auto"
+              quality={100}
+            />
+          </div>
+        </Section>
+      )}
       <ProjectInfo project={project} />
       <ProjectDescription desc={project.desc} />
-      <ProjectImage />
-      <ProjectImage />
+      {project.images && project.images.length > 1 && (
+        <Section>
+          <div className="flex flex-col items-center gap-16">
+            {project.images.slice(1).map((image, id) => (
+              <Image key={id} src={image} width={720} height={450} alt="" />
+            ))}
+          </div>
+        </Section>
+      )}
       <ProjectNext nextProject={nextProject} />
     </main>
   )
@@ -111,7 +136,7 @@ function ProjectImage({ url, alt = "" }: { url?: string; alt?: string }) {
 
 function ProjectDescription({ desc }: { desc: string }) {
   return (
-    <Section>
+    <Section className="py-4 sm:py-8 lg:py-8">
       <p className="lg:text-[2.5rem] leading-[170%]">{desc}</p>
     </Section>
   )
