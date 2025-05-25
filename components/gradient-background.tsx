@@ -2,8 +2,13 @@
 
 import { useEffect } from "react"
 import { Gradient } from "@/gradient"
+import { cn } from "@/lib/utils"
 
-export default function GradientBackground() {
+export default function GradientBackground({
+  className,
+}: {
+  className?: string
+}) {
   useEffect(() => {
     const gradient = new Gradient()
     gradient.initGradient("#gradient-canvas")
@@ -13,7 +18,7 @@ export default function GradientBackground() {
     <canvas
       id="gradient-canvas"
       data-transition-in
-      className="absolute top-0 left-0 w-full h-full"
+      className={cn("absolute top-0 left-0 w-full h-full", className)}
     />
   )
 }

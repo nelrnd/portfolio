@@ -52,9 +52,13 @@ export function ProjectList() {
           <ProjectCard key={project.slug} project={project} />
         ))}
 
-        <div className="w-fit m-auto">
-          <Button>Load more</Button>
-        </div>
+        <a
+          className="px-8 py-4 sm:text-xl sm:px-[2.5rem] sm:py-[1.25rem] w-fit rounded-[0.25rem] border border-border cursor-pointer m-auto"
+          href="https://github.com/nelrnd?tab=repositories"
+          target="_blank"
+        >
+          View more
+        </a>
       </Grid>
     </Section>
   )

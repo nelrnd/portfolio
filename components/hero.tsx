@@ -1,14 +1,11 @@
 "use client"
 
-import data from "@/data.json"
 import Section from "./section"
 import { useGSAP } from "@gsap/react"
-import { SplitText } from "gsap/SplitText"
 import gsap from "gsap"
 import { useRef } from "react"
 
 export default function Hero() {
-  const { hero } = data
   const container = useRef<HTMLElement>(null)
   const tl = useRef<GSAPTimeline>(null)
 
@@ -20,20 +17,28 @@ export default function Hero() {
       tl.current = gsap
         .timeline()
         .to(container.current, { opacity: 100, duration: 0.2 })
-        .from(line1Words, {
-          duration: 1,
-          y: 200,
-          opacity: 0,
-          stagger: 0.15,
-          ease: "power4.out",
-        })
-        .from(line2Words, {
-          duration: 1,
-          y: 200,
-          opacity: 0,
-          stagger: 0.15,
-          ease: "power4.out",
-        })
+        .from(
+          line1Words,
+          {
+            duration: 1,
+            y: 200,
+            opacity: 0,
+            stagger: 0.15,
+            ease: "back",
+          },
+          0
+        )
+        .from(
+          line2Words,
+          {
+            duration: 1,
+            y: 200,
+            opacity: 0,
+            stagger: 0.15,
+            ease: "back",
+          },
+          1
+        )
     },
     { scope: container }
   )

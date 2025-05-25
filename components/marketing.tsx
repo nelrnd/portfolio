@@ -1,7 +1,13 @@
+"use client"
+
 import { formatText } from "@/lib/utils"
 import Section from "./section"
 import data from "@/data.json"
 import GradientBackground from "./gradient-background"
+import { useGSAP } from "@gsap/react"
+import { useRef } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 export default function Marketing() {
   const { stance, results } = data.marketing
@@ -18,36 +24,50 @@ export default function Marketing() {
           {results.title}
         </h2>
 
-        <div className="overflow-hidden relative">
-          <div className="flex gap-8 w-[10000px]">
-            {results.content.map((result, id) => (
-              <div
-                key={id}
-                className="relative z-10 p-8 sm:text-2xl lg:text-[2.5rem] leading-[170%] border border-border w-[60vw] sm:h-[400px] flex items-end"
-              >
-                <p className="w-5/6">{result}</p>
-              </div>
-            ))}
-          </div>
-          <div
-            className="absolute inset-0"
-            style={{
-              mask: `
-                ${results.content
-                  .map((_, id) => `linear-gradient(white, white)`)
-                  .join(", ")}`,
-              maskComposite: "add",
-              maskPosition: results.content
-                .map((_, id) => `0 ${id * (400 + 32)}px`)
-                .join(", "),
-              maskSize: results.content.map(() => "100% 400px").join(", "),
-              maskRepeat: "no-repeat",
-            }}
-          >
-            <GradientBackground />
-          </div>
+        <div className="flex flex-col gap-8">
+          {results.content.map((result, id) => (
+            <Result key={id} isEven={id % 2 === 0}>
+              {result}
+            </Result>
+          ))}
         </div>
       </div>
     </Section>
+  )
+}
+
+gsap.registerPlugin(ScrollTrigger)
+
+function Result({
+  isEven,
+  children,
+}: {
+  isEven: boolean
+  children: React.ReactNode
+}) {
+  const container = useRef(null)
+  const card = useRef(null)
+
+  useGSAP(() => {
+    gsap.from(card.current, {
+      x: isEven ? 200 : -200,
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top bottom",
+        end: "center center",
+        scrub: true,
+      },
+    })
+  }, {})
+
+  return (
+    <div className="group" ref={container}>
+      <div
+        ref={card}
+        className="relative group-even:ml-auto z-10 p-8 sm:text-2xl lg:text-[2.5rem] leading-[170%] border border-border w-[60vw] sm:h-[400px] flex items-end"
+      >
+        <p className="w-5/6">{children}</p>
+      </div>
+    </div>
   )
 }

@@ -6,6 +6,8 @@ import Footer from "@/components/footer"
 import ReactLenis from "lenis/react"
 import gsap from "gsap"
 import ScrollTop from "@/components/scroll-top"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { SplitText } from "gsap/SplitText"
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-grotesk",
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
 }
 
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(SplitText)
+  gsap.registerPlugin(SplitText, ScrollTrigger)
 }
 
 export default function RootLayout({
