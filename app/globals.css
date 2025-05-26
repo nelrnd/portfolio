@@ -71,6 +71,19 @@ body {
   .hero-text {
     font-size: clamp(1rem, 10vw, 8rem);
   }
+
+  .headline {
+    font-size: clamp(2rem, 6.25vw, 5rem);
+  }
+
+  .fluid-headline {
+    font-size: clamp(1rem, 6.25vw, 40rem);
+  }
+}
+
+.fluid-copy {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  line-height: 180%;
 }
 
 #gradient-canvas {

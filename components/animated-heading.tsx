@@ -10,7 +10,7 @@ export default function AnimatedHeading({
   children,
   className,
 }: {
-  children: string
+  children: React.ReactNode
   className?: string
 }) {
   const heading = useRef<HTMLHeadingElement>(null)
@@ -30,7 +30,7 @@ export default function AnimatedHeading({
   }, {})
 
   return (
-    <h1 className={cn("text-[5rem] mb-12", className)} ref={heading}>
+    <h1 className={cn("headline mb-12", className)} ref={heading}>
       {children}
     </h1>
   )
