@@ -14,7 +14,7 @@ export default function ScrollTop() {
       window.scrollTo({ top: 0, left: 0, behavior: "instant" })
       lenis?.start()
     }, 10)
-  }, [pathname])
+  }, [pathname, lenis])
 
   return null
 }

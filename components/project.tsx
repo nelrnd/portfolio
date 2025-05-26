@@ -2,9 +2,7 @@ import type { Project } from "@/lib/definitions"
 import Link from "next/link"
 import Tag from "./tag"
 import data from "@/data.json"
-import Section from "./section"
 import Grid from "./grid"
-import Button from "./button"
 import Image from "next/image"
 
 export function ProjectCard({ project }: { project: Project }) {

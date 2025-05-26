@@ -11,7 +11,7 @@ export default async function Home() {
       <Hero />
       <Section>
         <h2 className="text-base mb-[1.875rem] sm:text-[1.875rem] sm:mb-[3.75rem] lg:text-[2.5rem] lg:mb-[5rem]">
-          Here's some of my work
+          Here&apos;s some of my work
         </h2>
         <ProjectList />
       </Section>

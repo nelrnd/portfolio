@@ -25,7 +25,7 @@ export default function PersonalInfo() {
           </div>
           <div>
             <h4 className="uppercase text-soft text-xl mb-1">
-              AT THE MOMENT, I'M
+              AT THE MOMENT, I&apos;M
             </h4>
             <p className="text-xl sm:text-[1.875rem] lg:text-[2.5rem] leading-none">
               {status}

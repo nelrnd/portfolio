@@ -124,16 +124,6 @@ function ProjectInfo({ project }: { project: Project }) {
   )
 }
 
-function ProjectImage({ url, alt = "" }: { url?: string; alt?: string }) {
-  return (
-    <Section className="py-4 sm:py-8 lg:py-8">
-      <div className="bg-gray-200 aspect-[16/9]"></div>
-
-      {url && <Image src={url} alt={alt} fill />}
-    </Section>
-  )
-}
-
 function ProjectDescription({ desc }: { desc: string }) {
   return (
     <Section className="py-0 sm:py-0 lg:py-0">

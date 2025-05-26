@@ -58,7 +58,7 @@ export default function Hero() {
               Hi,
             </div>{" "}
             <div className="inline-block word" aria-hidden>
-              I'm
+              I&apos;m
             </div>{" "}
             <div className="inline-block word" aria-hidden>
               N<ESymbol />

@@ -5,7 +5,7 @@ import data from "@/data.json"
 import Section from "./section"
 import WaveText from "./wave-text"
 import { useGSAP } from "@gsap/react"
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { usePathname } from "next/navigation"
 
@@ -17,7 +17,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
 
-  const onScroll = () => {
+  const toggleOpen = () => {
+    setOpen((prevOpen) => !prevOpen)
+  }
+
+  const onScroll = useCallback(() => {
     if (open) return
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop
     if (scrollTop < 0) return
@@ -27,11 +31,7 @@ export default function Navbar() {
       setVisible(false)
     }
     lastSrollTop.current = scrollTop
-  }
-
-  const toggleOpen = () => {
-    setOpen((prevOpen) => !prevOpen)
-  }
+  }, [open, visible, setVisible])
 
   useGSAP(() => {
     if (visible) {
