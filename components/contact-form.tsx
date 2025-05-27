@@ -4,14 +4,14 @@ import Button from "./button"
 
 export default function ContactForm() {
   return (
-    <form className="space-y-8 md:space-y-16 md:text-4xl">
+    <form className="space-y-8 md:space-y-16 md:text-xl">
       <div>
         <input
           type="text"
           name="fullName"
           id="fullName"
           placeholder="Full name *"
-          className="w-full h-[50px] md:h-[80px] border-b border-b-subtle focus:border-b-foreground focus:outline-none"
+          className="w-full h-[2.75em] border-b border-b-subtle focus:border-b-foreground focus:outline-none"
         />
       </div>
       <div>
@@ -20,7 +20,7 @@ export default function ContactForm() {
           name="email"
           id="email"
           placeholder="Email *"
-          className="w-full h-[50px] md:h-[80px] border-b border-b-subtle focus:border-b-foreground focus:outline-none"
+          className="w-full h-[2.75em] border-b border-b-subtle focus:border-b-foreground focus:outline-none"
         />
       </div>
       <div>
@@ -29,7 +29,7 @@ export default function ContactForm() {
           name="company"
           id="company"
           placeholder="Company name"
-          className="w-full h-[50px] md:h-[80px] border-b border-b-subtle focus:border-b-foreground focus:outline-none"
+          className="w-full h-[2.75em] border-b border-b-subtle focus:border-b-foreground focus:outline-none"
         />
       </div>
       <div>
@@ -37,10 +37,12 @@ export default function ContactForm() {
           name="message"
           id="message"
           placeholder="Message *"
-          className="w-full h-[150px] border-b border-b-subtle focus:border-b-foreground focus:outline-none"
+          className="w-full h-[6em] border-b border-b-subtle focus:border-b-foreground focus:outline-none"
         />
       </div>
-      <Button>Envoyer</Button>
+      <Button className="w-full bg-foreground text-background md:text-xl">
+        <span>Envoyer</span>
+      </Button>
     </form>
   )
 }
