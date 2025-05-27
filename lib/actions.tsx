@@ -2,6 +2,7 @@
 
 import { z } from "zod"
 import data from "@/data.json"
+import { Resend } from "resend"
 
 export type SendEmailState = {
   errors?: {
@@ -65,5 +66,20 @@ export async function sendEmail(prevState: SendEmailState, formData: FormData) {
     }
   }
 
-  return { message: "sent!" }
+  const resend = new Resend(process.env.RESEND_API_KEY)
+
+  const { data, error } = await resend.emails.send({
+    from: "nel.dev contact form <info@nel.dev>",
+    to: [process.env.CONTACT_FORM_DEST as string],
+    subject: `(nel.dev) New message from ${validatedFields.data.name} (${validatedFields.data.email})`,
+    text: validatedFields.data.message,
+  })
+
+  console.log(data)
+
+  if (error) {
+    return { message: "Something went wrong, try again" }
+  }
+
+  return { message: "Messange sent, thank you!" }
 }
