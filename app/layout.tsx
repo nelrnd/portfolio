@@ -8,6 +8,7 @@ import gsap from "gsap"
 import ScrollTop from "@/components/scroll-top"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
+import MousePosProvider from "@/components/mouse-pos-provider"
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-grotesk",
@@ -35,11 +36,13 @@ export default function RootLayout({
     <ReactLenis root>
       <html lang="en">
         <body className={`${spaceGrotesk.className} antialiased`}>
-          <div className="relative z-10">
-            <Navbar />
-            {children}
-            <Footer />
-          </div>
+          <MousePosProvider>
+            <div className="relative z-10">
+              <Navbar />
+              {children}
+              <Footer />
+            </div>
+          </MousePosProvider>
         </body>
       </html>
       <ScrollTop />
