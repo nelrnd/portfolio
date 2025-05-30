@@ -12,7 +12,7 @@ import LocaleSwitcher from "./locale-switcher"
 import { useTranslations } from "next-intl"
 
 export default function Navbar() {
-  const { name } = data
+  const { name, pages } = data
   const t = useTranslations("Pages")
 
   const elemRef = useRef(null)
@@ -73,10 +73,10 @@ export default function Navbar() {
             </li>
 
             <div className="hidden sm:flex items-center gap-8 relative top-[2px]">
-              {["1", "2", "3"].map((key, id) => (
+              {pages.map((page, id) => (
                 <li key={id}>
-                  <Link href={t(`${key}.href`)} className="block uppercase">
-                    <WaveText text={t(`${key}.name`)} />
+                  <Link href={t(`${page}.href`)} className="block uppercase">
+                    <WaveText text={t(`${page}.name`)} />
                   </Link>
                 </li>
               ))}
@@ -150,6 +150,7 @@ function MenuSheet({
   closeMenu: () => void
 }) {
   const sheetRef = useRef<HTMLDivElement>(null)
+  const { pages } = data
   const t = useTranslations("Pages")
 
   useGSAP(() => {
@@ -167,14 +168,14 @@ function MenuSheet({
     >
       <nav className="p-16 pt-32 h-full">
         <ul className="space-y-8 h-full flex flex-col">
-          {["1", "2", "3"].map((key, id) => (
+          {pages.map((page, id) => (
             <li key={id}>
               <Link
                 onClick={closeMenu}
-                href={t(`${key}.href`)}
+                href={t(`${page}.href`)}
                 className="block uppercase text-2xl"
               >
-                <WaveText text={t(`${key}.name`)} />
+                <WaveText text={t(`${page}.name`)} />
               </Link>
             </li>
           ))}

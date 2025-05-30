@@ -3,11 +3,19 @@ import { ProjectList } from "@/components/project"
 import Section from "@/components/section"
 import { Metadata } from "next"
 import { useTranslations } from "next-intl"
-import { setRequestLocale } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 import { use } from "react"
 
-export const metadata: Metadata = {
-  title: "Work",
+type Props = {
+  params: Promise<{ locale: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "Pages" })
+  return {
+    title: t("work.name"),
+  }
 }
 
 export default function Page({

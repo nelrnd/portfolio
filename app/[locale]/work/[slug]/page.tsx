@@ -21,11 +21,15 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params
+  const { slug, locale } = await params
   const project = data.projects.content.find((project) => project.slug === slug)
+  const t = await getTranslations({
+    locale,
+    namespace: `Work.projects.${project?.slug}`,
+  })
   return {
-    title: project?.title,
-    description: project?.desc,
+    title: project?.title + ", " + t("subTitle"),
+    description: t("description"),
     keywords: project?.tags,
   }
 }

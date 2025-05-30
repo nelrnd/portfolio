@@ -1,14 +1,14 @@
 {
   "Pages": {
-    "1": {
+    "work": {
       "href": "/work",
       "name": "Projets"
     },
-    "2": {
+    "about": {
       "href": "/about",
       "name": "À propos"
     },
-    "3": {
+    "contact": {
       "href": "/contact",
       "name": "Contact"
     }

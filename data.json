@@ -1,5 +1,6 @@
 {
   "name": "Nelson",
+  "pages": ["work", "about", "contact"],
   "projects": {
     "content": [
       {
