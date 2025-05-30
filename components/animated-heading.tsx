@@ -16,16 +16,18 @@ export default function AnimatedHeading({
   const heading = useRef<HTMLHeadingElement>(null)
 
   useGSAP(() => {
-    const split = SplitText.create(heading.current, {
-      type: "chars",
-      mask: "chars",
-    })
+    document.fonts.ready.then(() => {
+      const split = SplitText.create(heading.current, {
+        type: "chars",
+        mask: "chars",
+      })
 
-    gsap.from(split.chars, {
-      y: 200,
-      duration: 1,
-      ease: "power4.out",
-      stagger: 0.025,
+      gsap.from(split.chars, {
+        y: 200,
+        duration: 1,
+        ease: "power4.out",
+        stagger: 0.025,
+      })
     })
   }, {})
 

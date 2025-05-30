@@ -1,5 +1,6 @@
 import AnimatedHeading from "@/components/animated-heading"
 import Grid from "@/components/grid"
+import { MagneticLink } from "@/components/magnetic"
 import Section from "@/components/section"
 import Tag from "@/components/tag"
 import data from "@/data.json"
@@ -137,13 +138,13 @@ function ProjectDescription({ desc }: { desc: string }) {
 function ProjectNext({ nextProject }: { nextProject: Project }) {
   return (
     <Section>
-      <Link
+      <MagneticLink
         href={`/work/${nextProject.slug}`}
-        className="btn btn-secondary btn-large w-fit m-auto"
+        className="w-fit m-auto lg:text-[4rem] lg:px-16 lg:h-[160px]"
+        icon={<ChevronRightIcon className="size-[0.75em]" />}
       >
         Next work
-        <ChevronRightIcon className="size-[0.75em]" />
-      </Link>
+      </MagneticLink>
     </Section>
   )
 }

@@ -3,6 +3,7 @@
 import { useActionState } from "react"
 import Button from "./button"
 import { sendEmail, SendEmailState } from "@/lib/actions"
+import { MagneticButton } from "./magnetic"
 
 export default function ContactForm() {
   const initialState: SendEmailState = { errors: {}, data: {} }
@@ -65,12 +66,15 @@ export default function ContactForm() {
         )}
       </div>
       {state.message && <p>{state.message}</p>}
-      <Button
+
+      <MagneticButton
+        type="submit"
         disabled={isPending}
-        className="w-full bg-foreground text-background md:text-xl"
+        className="bg-foreground text-background w-full"
+        locked={true}
       >
         {isPending ? "Loading..." : "Submit"}
-      </Button>
+      </MagneticButton>
     </form>
   )
 }

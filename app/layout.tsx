@@ -45,7 +45,6 @@ export default function RootLayout({
           </MousePosProvider>
         </body>
       </html>
-      <ScrollTop />
     </ReactLenis>
   )
 }

@@ -4,7 +4,7 @@ import Tag from "./tag"
 import data from "@/data.json"
 import Grid from "./grid"
 import Image from "next/image"
-import MagneticButton from "./magnetic-button"
+import { MagneticButton, MagneticLink } from "./magnetic"
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -48,16 +48,13 @@ export function ProjectList() {
         <ProjectCard key={project.slug} project={project} />
       ))}
 
-      {/*
-      <a
-        className="px-8 py-4 sm:text-xl sm:px-[2.5rem] sm:py-[1.25rem] w-fit rounded-[0.25rem] border border-border cursor-pointer m-auto"
+      <MagneticLink
+        className="w-fit m-auto"
         href="https://github.com/nelrnd?tab=repositories"
         target="_blank"
       >
         View more
-      </a>*/}
-
-      <MagneticButton className="w-fit m-auto">View more</MagneticButton>
+      </MagneticLink>
     </Grid>
   )
 }
