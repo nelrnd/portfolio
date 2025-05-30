@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Button from "./button"
 import Clock from "./clock"
 import Section from "./section"
 import data from "@/data.json"

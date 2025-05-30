@@ -4,7 +4,7 @@ import Tag from "./tag"
 import data from "@/data.json"
 import Grid from "./grid"
 import Image from "next/image"
-import { MagneticButton, MagneticLink } from "./magnetic"
+import { MagneticLink } from "./magnetic"
 
 export function ProjectCard({ project }: { project: Project }) {
   return (

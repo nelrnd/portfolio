@@ -1,7 +1,6 @@
 "use client"
 
 import { useActionState } from "react"
-import Button from "./button"
 import { sendEmail, SendEmailState } from "@/lib/actions"
 import { MagneticButton } from "./magnetic"
 

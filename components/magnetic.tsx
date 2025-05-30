@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useLayoutEffect } from "react"
+import { useCallback, useEffect, useLayoutEffect } from "react"
 import { useRef } from "react"
 import { cn, distance, lerp } from "@/lib/utils"
 import { useMousePos } from "./mouse-pos-provider"
@@ -8,7 +8,6 @@ import { useGSAP } from "@gsap/react"
 import { SplitText } from "gsap/SplitText"
 import gsap from "gsap"
 import Link, { LinkProps } from "next/link"
-import { ChevronRightIcon } from "@heroicons/react/16/solid"
 
 export function MagneticButton({
   children,
@@ -31,10 +30,15 @@ export function MagneticButton({
     ty: { previous: 0, current: 0, amt: 0.2 },
   })
   const state = useRef({ hover: false })
-  const rect = useRef<any>({})
+  const rect = useRef<{
+    top: number
+    left: number
+    width: number
+    height: number
+  }>(null)
   const distanceToTrigger = useRef<number>(null)
 
-  const calculateSizePosition = () => {
+  const calculateSizePosition = useCallback(() => {
     if (!elRef.current) return
     const elRect = elRef.current.getBoundingClientRect()
     rect.current = {
@@ -47,9 +51,9 @@ export function MagneticButton({
     if (rect.current) {
       distanceToTrigger.current = locked ? -Infinity : rect.current?.width * 0.6
     }
-  }
+  }, [locked, elRef])
 
-  const render = () => {
+  const render = useCallback(() => {
     if (!rect.current || !distanceToTrigger.current) return
     const distanceMouseButton = distance(
       mousePosRef.x + window.scrollX,
@@ -101,23 +105,22 @@ export function MagneticButton({
     }
 
     animationIdRef.current = requestAnimationFrame(render)
-  }
+  }, [mousePosRef.x, mousePosRef.y])
 
   useEffect(() => {
     window.addEventListener("resize", calculateSizePosition)
     return () => window.removeEventListener("resize", calculateSizePosition)
-  }, [])
+  }, [calculateSizePosition])
 
   useLayoutEffect(() => {
     calculateSizePosition()
     animationIdRef.current = requestAnimationFrame(render)
-
     return () => {
       if (animationIdRef.current) {
         cancelAnimationFrame(animationIdRef.current)
       }
     }
-  }, [])
+  }, [render, calculateSizePosition])
 
   const splitInstancesRef = useRef<{ text?: SplitText; subText?: SplitText }>(
     {}
@@ -208,10 +211,15 @@ export function MagneticLink({
     ty: { previous: 0, current: 0, amt: 0.2 },
   })
   const state = useRef({ hover: false })
-  const rect = useRef<any>({})
+  const rect = useRef<{
+    top: number
+    left: number
+    width: number
+    height: number
+  }>(null)
   const distanceToTrigger = useRef<number>(null)
 
-  const calculateSizePosition = () => {
+  const calculateSizePosition = useCallback(() => {
     if (!elRef.current) return
     const elRect = elRef.current.getBoundingClientRect()
     rect.current = {
@@ -224,9 +232,9 @@ export function MagneticLink({
     if (rect.current) {
       distanceToTrigger.current = rect.current?.width * 0.6
     }
-  }
+  }, [elRef])
 
-  const render = () => {
+  const render = useCallback(() => {
     if (!rect.current || !distanceToTrigger.current) return
     const distanceMouseButton = distance(
       mousePosRef.x + window.scrollX,
@@ -278,23 +286,22 @@ export function MagneticLink({
     }
 
     animationIdRef.current = requestAnimationFrame(render)
-  }
+  }, [mousePosRef.x, mousePosRef.y])
 
   useEffect(() => {
     window.addEventListener("resize", calculateSizePosition)
     return () => window.removeEventListener("resize", calculateSizePosition)
-  }, [])
+  }, [calculateSizePosition])
 
   useLayoutEffect(() => {
     calculateSizePosition()
     animationIdRef.current = requestAnimationFrame(render)
-
     return () => {
       if (animationIdRef.current) {
         cancelAnimationFrame(animationIdRef.current)
       }
     }
-  }, [])
+  }, [render, calculateSizePosition])
 
   const splitInstancesRef = useRef<{ text?: SplitText; subText?: SplitText }>(
     {}

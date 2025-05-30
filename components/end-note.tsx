@@ -1,7 +1,6 @@
 "use client"
 
 import { useLenis } from "lenis/react"
-import Button from "./button"
 import Section from "./section"
 import { MagneticButton } from "./magnetic"
 

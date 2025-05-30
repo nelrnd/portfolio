@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useEffect, useRef, useState } from "react"
+import { createContext, useContext, useEffect, useRef } from "react"
 
 const MousePosContext = createContext({ x: 0, y: 0 })
 

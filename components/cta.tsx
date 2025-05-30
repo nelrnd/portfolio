@@ -13,7 +13,7 @@ export default function CTA() {
           <h2 className="text-xl md:text-4xl leading-[130%]">
             Have a project in mind?
             <br />
-            Let's build something amazing together
+            Let&pos;s build something amazing together
           </h2>
           <MagneticLink href={cta.href} className="w-fit">
             {cta.button}
