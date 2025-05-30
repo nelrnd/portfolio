@@ -1,4 +1,18 @@
 {
+  "Pages": {
+    "1": {
+      "href": "/work",
+      "name": "Projets"
+    },
+    "2": {
+      "href": "/about",
+      "name": "À propos"
+    },
+    "3": {
+      "href": "/contact",
+      "name": "Contact"
+    }
+  },
   "Home": {
     "projectListTitle": "Voici quelques projets"
   },

@@ -9,9 +9,12 @@ import { useCallback, useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { usePathname } from "@/i18n/navigation"
 import LocaleSwitcher from "./locale-switcher"
+import { useTranslations } from "next-intl"
 
 export default function Navbar() {
-  const { name, pages } = data
+  const { pages, name } = data
+  const t = useTranslations("Pages")
+
   const elemRef = useRef(null)
   const lastSrollTop = useRef(0)
   const [visible, setVisible] = useState(true)
@@ -70,10 +73,10 @@ export default function Navbar() {
             </li>
 
             <div className="hidden sm:flex items-center gap-8 relative top-[2px]">
-              {pages.map((page) => (
-                <li key={page.url}>
-                  <Link href={page.url} className="block uppercase">
-                    <WaveText text={page.name} />
+              {["1", "2", "3"].map((key, id) => (
+                <li key={id}>
+                  <Link href={t(`${key}.href`)} className="block uppercase">
+                    <WaveText text={t(`${key}.name`)} />
                   </Link>
                 </li>
               ))}
@@ -148,6 +151,7 @@ function MenuSheet({
 }) {
   const { pages } = data
   const sheetRef = useRef<HTMLDivElement>(null)
+  const t = useTranslations("Pages")
 
   useGSAP(() => {
     gsap.to(sheetRef.current, {
@@ -164,14 +168,14 @@ function MenuSheet({
     >
       <nav className="p-16 pt-32 h-full">
         <ul className="space-y-8 h-full flex flex-col">
-          {pages.map((page) => (
-            <li key={page.name}>
+          {["1", "2", "3"].map((key, id) => (
+            <li key={id}>
               <Link
                 onClick={closeMenu}
-                href={page.url}
-                className="text-2xl uppercase p-1"
+                href={t(`${key}.href`)}
+                className="block uppercase text-2xl"
               >
-                {page.name}
+                <WaveText text={t(`${key}.name`)} />
               </Link>
             </li>
           ))}
