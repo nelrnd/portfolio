@@ -68,8 +68,12 @@ body {
     @apply border;
   }
 
-  .hero-text {
+  .hero-text-en {
     font-size: clamp(1rem, 10vw, 8rem);
+  }
+
+  .hero-text-fr {
+    font-size: clamp(1rem, 7.5vw, 6rem);
   }
 
   .headline {

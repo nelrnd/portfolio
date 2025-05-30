@@ -12,7 +12,7 @@ import LocaleSwitcher from "./locale-switcher"
 import { useTranslations } from "next-intl"
 
 export default function Navbar() {
-  const { pages, name } = data
+  const { name } = data
   const t = useTranslations("Pages")
 
   const elemRef = useRef(null)
@@ -149,7 +149,6 @@ function MenuSheet({
   open: boolean
   closeMenu: () => void
 }) {
-  const { pages } = data
   const sheetRef = useRef<HTMLDivElement>(null)
   const t = useTranslations("Pages")
 
