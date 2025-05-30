@@ -150,6 +150,7 @@ function MenuSheet({
   closeMenu: () => void
 }) {
   const sheetRef = useRef<HTMLDivElement>(null)
+  const navRef = useRef<HTMLElement>(null)
   const { pages } = data
   const t = useTranslations("Pages")
 
@@ -159,14 +160,20 @@ function MenuSheet({
       duration: 0.4,
       ease: open ? "power1.out" : "power1.in",
     })
+    gsap.to(navRef.current, {
+      x: open ? "0" : "110%",
+      opacity: open ? 1 : 0,
+      duration: 0.3,
+      ease: open ? "power1.out" : "power1.in",
+    })
   }, [open])
 
   return (
     <div
       ref={sheetRef}
-      className="fixed z-40 top-0 left-0 w-full h-full bg-background backdrop-blur-2xl translate-x-full"
+      className="fixed z-40 top-0 left-0 w-full h-full bg-background backdrop-blur-2xl translate-x-full overflow-hidden"
     >
-      <nav className="p-16 pt-32 h-full">
+      <nav className="p-16 pt-32 h-full" ref={navRef}>
         <ul className="space-y-8 h-full flex flex-col">
           {pages.map((page, id) => (
             <li key={id}>
