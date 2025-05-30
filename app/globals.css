@@ -74,6 +74,7 @@ body {
 
   .headline {
     font-size: clamp(2rem, 6.25vw, 5rem);
+    line-height: 120%;
   }
 
   .fluid-headline {
