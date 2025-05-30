@@ -112,11 +112,10 @@
   },
   "about": "From stop motion animation with my LEGOs at 11 to doing 3d render of my Minecraft world, I've always had a passion for creating stuff on my computer. When I stumbled upon design and programming, I really liked it and decided to made it my job. From that day, I help businesses thrive in the digital world and increase sales. I also enjoy adventure, good design, and nature.",
   "cta": {
-    "text": "Wanna talk to me about an idea?",
-    "buttonText": "Let's connect",
-    "url": "/contact"
+    "headline": "Have a project in mind? Let's build something amazing together",
+    "button": "Get in touch",
+    "href": "/contact"
   },
-
   "contact": {
     "title": "Let's start something",
     "email": "info@nel.dev"

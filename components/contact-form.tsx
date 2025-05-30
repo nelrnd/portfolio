@@ -70,7 +70,7 @@ export default function ContactForm() {
       <MagneticButton
         type="submit"
         disabled={isPending}
-        className="bg-foreground text-background w-full"
+        className="bg-foreground text-background w-full font-medium"
         locked={true}
       >
         {isPending ? "Loading..." : "Submit"}

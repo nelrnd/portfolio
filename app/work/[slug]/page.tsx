@@ -1,4 +1,5 @@
 import AnimatedHeading from "@/components/animated-heading"
+import CTA from "@/components/cta"
 import Grid from "@/components/grid"
 import { MagneticLink } from "@/components/magnetic"
 import Section from "@/components/section"
@@ -68,6 +69,7 @@ export default async function Page({ params }: Props) {
         </Section>
       )}
       <ProjectNext nextProject={nextProject} />
+      <CTA />
     </main>
   )
 }

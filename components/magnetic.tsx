@@ -157,7 +157,7 @@ export function MagneticButton({
   return (
     <button
       className={cn(
-        "cursor-pointer appearance-none border border-border hover:border-foreground bg-background text-foreground rounded-xl group active:scale-95 will-change-transform h-20 min-w-48 px-12 md:text-xl overflow-hidden flex items-center justify-center disabled:opacity-50",
+        "cursor-pointer appearance-none border border-border hover:border-foreground bg-background text-foreground rounded-xl group active:scale-95 will-change-transform h-16 md:h-20 min-w-48 px-12 md:text-xl overflow-hidden flex items-center justify-center disabled:opacity-50",
         className
       )}
       {...props}
@@ -334,7 +334,7 @@ export function MagneticLink({
   return (
     <Link
       className={cn(
-        "cursor-pointer appearance-none border border-border hover:border-foreground bg-background text-foreground rounded-xl group active:scale-95 will-change-transform h-20 min-w-48 px-12 md:text-xl overflow-hidden flex items-center justify-center",
+        "cursor-pointer appearance-none border border-border hover:border-foreground bg-background text-foreground rounded-xl group active:scale-95 will-change-transform h-16 md:h-20 min-w-48 px-12 md:text-xl overflow-hidden flex items-center justify-center",
         className
       )}
       {...props}
