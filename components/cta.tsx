@@ -1,22 +1,21 @@
-import data from "@/data.json"
 import Section from "./section"
 import { MagneticLink } from "./magnetic"
 import GradientBackground from "./gradient-background"
+import { useTranslations } from "next-intl"
+import RichText from "./rich-text"
 
 export default function CTA() {
-  const { cta } = data
+  const t = useTranslations("CTA")
 
   return (
     <Section>
       <div className="relative h-[300px] md:h-[400px] rounded-[40px] overflow-hidden shadow shadow-soft/20 flex items-center">
         <div className="relative z-10 p-8 md:p-16 space-y-8">
           <h2 className="text-xl md:text-4xl leading-[130%]">
-            Have a project in mind?
-            <br />
-            Let&apos;s build something amazing together
+            <RichText>{(tags) => t.rich("heading", tags)}</RichText>
           </h2>
-          <MagneticLink href={cta.href} className="w-fit">
-            {cta.button}
+          <MagneticLink href={t("href")} className="w-fit">
+            {t("btnText")}
           </MagneticLink>
         </div>
         <GradientBackground className="scale-200" />

@@ -1,7 +1,5 @@
 {
-  "HomePage": {
-    "title": "Hello World!",
-    "about": "Try to change langage",
+  "Home": {
     "projectListTitle": "Here's some of my work"
   },
   "Contact": {
@@ -59,5 +57,26 @@
         "description": "BooChat is a dynamic real-time messaging platform built with React, Express, and Socket.io that provides seamless communication experiences. This full-stack application harnesses the power of WebSockets to enable instant message delivery and status updates. Users can create personal accounts, search for contacts, initiate one-on-one conversations, establish group chats, and share images effortlessly. The interface offers intuitive real-time indicators showing when contacts are online or actively typing in a conversation. BooChat enhances the social experience with interactive elements, including an embedded tic-tac-toe game that friends can enjoy while chatting. Through thoughtful implementation of modern web technologies, BooChat delivers responsive performance across devices while maintaining secure and reliable connections for all communications."
       }
     }
+  },
+  "CTA": {
+    "heading": "Have a project in mind?<br></br>Let's build something amazing together",
+    "btnText": "Get in touch",
+    "href": "/contact"
+  },
+  "PersonalInfo": {
+    "labels": {
+      "location": "Currently in",
+      "time": "Local time is",
+      "availability": "At the moment, I'm"
+    },
+    "data": {
+      "location": "Paris, FRANCE",
+      "availability": "Available for work"
+    },
+    "btnText": "Me contacter"
+  },
+  "EndNote": {
+    "heading": "Thank’s for the visit! ✌️",
+    "btnText": "Scroll back to top"
   }
 }

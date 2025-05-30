@@ -5,17 +5,21 @@ import PersonalInfo from "@/components/personal-info"
 import { ProjectList } from "@/components/project"
 import Section from "@/components/section"
 import { useTranslations } from "next-intl"
+import { setRequestLocale } from "next-intl/server"
+import { use } from "react"
 
-export default function Home() {
-  const t = useTranslations("HomePage")
+export default function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = use(params)
+  setRequestLocale(locale)
+
+  const t = useTranslations("Home")
+
   return (
     <main>
-      <section>
-        <div>
-          <h1>{t("title")}</h1>
-          <h1>{t("about")}</h1>
-        </div>
-      </section>
       <Hero />
       <Section>
         <h2 className="text-base mb-[1.875rem] sm:text-[1.875rem] sm:mb-[3.75rem] lg:text-[2.5rem] lg:mb-[5rem]">
