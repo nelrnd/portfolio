@@ -1,13 +1,13 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import data from "@/data.json"
 import Section from "./section"
 import WaveText from "./wave-text"
 import { useGSAP } from "@gsap/react"
 import { useCallback, useEffect, useRef, useState } from "react"
 import gsap from "gsap"
-import { usePathname } from "next/navigation"
+import { usePathname } from "@/i18n/navigation"
 
 export default function Navbar() {
   const { name, pages } = data

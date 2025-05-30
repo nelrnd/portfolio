@@ -1,7 +1,7 @@
 "use client"
 
 import { useLenis } from "lenis/react"
-import { usePathname } from "next/navigation"
+import { usePathname } from "@/i18n/navigation"
 import { useEffect } from "react"
 
 export default function ScrollTop() {

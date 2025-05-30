@@ -13,7 +13,7 @@ import type { Metadata } from "next"
 import { hasLocale, useTranslations } from "next-intl"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import Image from "next/image"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { notFound } from "next/navigation"
 
 type Props = {

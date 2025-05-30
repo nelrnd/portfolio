@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import Section from "./section"
 import data from "@/data.json"
 import { getYear } from "@/lib/utils"

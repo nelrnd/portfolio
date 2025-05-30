@@ -61,10 +61,10 @@ export default async function LocaleLayout({
                 <Footer />
               </div>
             </MousePosProvider>
+            <ScrollTop />
           </NextIntlClientProvider>
         </body>
       </html>
-      <ScrollTop />
     </ReactLenis>
   )
 }

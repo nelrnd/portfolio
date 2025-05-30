@@ -1,5 +1,5 @@
 import type { Project } from "@/lib/definitions"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import Tag from "./tag"
 import data from "@/data.json"
 import Grid from "./grid"

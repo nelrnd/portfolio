@@ -3,11 +3,15 @@
 import Section from "./section"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
+import { useLocale } from "next-intl"
 import { useRef } from "react"
 
 export default function Hero() {
+  const locale = useLocale()
   const container = useRef<HTMLElement>(null)
   const tl = useRef<GSAPTimeline>(null)
+
+  console.log(locale)
 
   useGSAP(
     () => {
@@ -42,6 +46,40 @@ export default function Hero() {
     },
     { scope: container }
   )
+
+  if (locale === "fr") {
+    return (
+      <Section ref={container} className="opacity-0">
+        <h1 className="text-[6rem] space-y-[0.1875em]">
+          <div className="block line-1" aria-label="Hi, I'm Nelson">
+            <div
+              style={{
+                position: "relative",
+                display: "inline-block",
+                overflow: "clip",
+              }}
+            >
+              Salut, je suis Nelson
+            </div>
+          </div>
+          <div
+            className="inline-block w-full text-right line-2"
+            aria-label="I build websites"
+          >
+            <div
+              style={{
+                position: "relative",
+                display: "inline-block",
+                overflow: "clip",
+              }}
+            >
+              Je créé des sites web
+            </div>
+          </div>
+        </h1>
+      </Section>
+    )
+  }
 
   return (
     <Section ref={container} className="opacity-0">
