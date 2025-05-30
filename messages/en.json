@@ -63,6 +63,17 @@
     "btnText": "Get in touch",
     "href": "/contact"
   },
+  "Marketing": {
+    "stance": "I build <strong>powerful, interactive websites</strong> that are lightning-fast, rank high on Google, and <strong>turn visitors into paying customers</strong>. My standout advantage? Exceptional efficiency. I deliver your complete, custom website in <strong>just 3 days</strong>.",
+    "results": {
+      "heading": "What you'll get:",
+      "content": {
+        "1": "A professional website that showcases your brand and builds instant credibility with your target audience.",
+        "2": "Strategic conversion pathways that transform visitors into customers, delivering measurable results for your business.",
+        "3": "Effective SEO implementation that boosts your search rankings and drives valuable organic traffic without ongoing ad costs."
+      }
+    }
+  },
   "PersonalInfo": {
     "labels": {
       "location": "Currently in",

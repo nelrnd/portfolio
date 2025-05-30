@@ -63,6 +63,17 @@
     "btnText": "Me contacter",
     "href": "/contact"
   },
+  "Marketing": {
+    "stance": "Je crée des <strong>sites web puissants et interactifs</strong> qui sont ultra-rapides, bien référencés sur Google, et <strong>transforment les visiteurs en clients</strong>. Mon avantage distinctif ? Une efficacité exceptionnelle. Je livre votre site web complet et personnalisé en seulement <strong>3 jours</strong>.",
+    "results": {
+      "heading": "Ce que je vous propose:",
+      "content": {
+        "1": "Un site web professionnel qui met en valeur votre marque et établit instantanément votre crédibilité auprès de votre audience cible.",
+        "2": "Des parcours de conversion stratégiques qui transforment les visiteurs en clients, générant des résultats mesurables pour votre entreprise.",
+        "3": "Une implémentation SEO efficace qui améliore votre référencement et génère du trafic organique de qualité sans coûts publicitaires récurrents."
+      }
+    }
+  },
   "PersonalInfo": {
     "labels": {
       "location": "En ce moment à",

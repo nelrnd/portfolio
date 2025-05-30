@@ -7,26 +7,30 @@ import { useGSAP } from "@gsap/react"
 import { useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useTranslations } from "next-intl"
+import RichText from "./rich-text"
 
 export default function Marketing() {
   const { stance, results } = data.marketing
+
+  const t = useTranslations("Marketing")
 
   return (
     <Section className="overflow-hidden">
       <div className="mb-[2rem] sm:mb-[4rem]">
         <p className="sm:text-2xl lg:text-[2.5rem] leading-[170%]">
-          {formatText(stance)}
+          <RichText>{(tags) => t.rich("stance", tags)}</RichText>
         </p>
       </div>
       <div>
         <h2 className="sm:text-2xl lg:text-[2.5rem] leading-[170%] mb-[1.5rem] sm:mb-[3rem]">
-          {results.title}
+          {t("results.heading")}
         </h2>
 
         <div className="flex flex-col gap-8">
-          {results.content.map((result, id) => (
-            <Result key={id} isEven={id % 2 === 0}>
-              {result}
+          {["1", "2", "3"].map((key, id) => (
+            <Result key={key} isEven={id % 2 === 0}>
+              {t(`results.content.${key}`)}
             </Result>
           ))}
         </div>
