@@ -33,7 +33,20 @@
           "from": "#31194A",
           "to": "#070022"
         },
-        "images": ["/ahsi_1.jpg", "/ahsi_2.jpg", "/ahsi_3.jpg"],
+        "images": [
+          "/ahsi_01.jpg",
+          "/ahsi_02.jpg",
+          "/ahsi_03.jpg",
+          "/ahsi_04.jpg",
+          "/ahsi_05.jpg",
+          "/ahsi_06.jpg",
+          "/ahsi_07.jpg",
+          "/ahsi_08.jpg",
+          "/ahsi_09.jpg",
+          "/ahsi_10.jpg",
+          "/ahsi_11.jpg",
+          "/ahsi_12.jpg"
+        ],
         "links": {
           "website": "https://ahsi.nel.dev/",
           "code": "https://github.com/nelrnd/social-media"
