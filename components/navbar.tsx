@@ -8,6 +8,7 @@ import { useGSAP } from "@gsap/react"
 import { useCallback, useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { usePathname } from "@/i18n/navigation"
+import LocaleSwitcher from "./locale-switcher"
 
 export default function Navbar() {
   const { name, pages } = data
@@ -76,6 +77,9 @@ export default function Navbar() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <LocaleSwitcher />
+              </li>
             </div>
 
             <div className="block sm:hidden h-8">
@@ -158,8 +162,8 @@ function MenuSheet({
       ref={sheetRef}
       className="fixed z-40 top-0 left-0 w-full h-full bg-background backdrop-blur-2xl translate-x-full"
     >
-      <nav className="p-16 pt-32">
-        <ul className="space-y-8">
+      <nav className="p-16 pt-32 h-full">
+        <ul className="space-y-8 h-full flex flex-col">
           {pages.map((page) => (
             <li key={page.name}>
               <Link
@@ -171,6 +175,9 @@ function MenuSheet({
               </Link>
             </li>
           ))}
+          <li className="mt-auto">
+            <LocaleSwitcher />
+          </li>
         </ul>
       </nav>
     </div>

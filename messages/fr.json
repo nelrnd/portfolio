@@ -89,5 +89,9 @@
   "EndNote": {
     "heading": "Merci d'être passé! ✌️",
     "btnText": "Retourner en haut"
+  },
+  "LocaleSwitcher": {
+    "label": "Changer de langue",
+    "locale": "{locale, select, fr {FR} en {EN} other {Unknown}}"
   }
 }
