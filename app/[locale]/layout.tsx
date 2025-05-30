@@ -12,6 +12,7 @@ import ScrollTop from "@/components/scroll-top"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SplitText } from "gsap/SplitText"
 import MousePosProvider from "@/components/mouse-pos-provider"
+import { setRequestLocale } from "next-intl/server"
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-grotesk",
@@ -30,6 +31,10 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(SplitText, ScrollTrigger)
 }
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
+
 export default async function LocaleLayout({
   children,
   params,
@@ -41,6 +46,8 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound()
   }
+
+  setRequestLocale(locale)
 
   return (
     <ReactLenis root>

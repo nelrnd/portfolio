@@ -1,6 +1,29 @@
 {
   "HomePage": {
-    "title": "Salut la terre!",
-    "about": "Essaye de changer le language"
+    "title": "Hello World!",
+    "about": "Try to change langage",
+    "projectListTitle": "Here's some of my work"
+  },
+  "Contact": {
+    "heading": "Commençons<br></br>quelque chose",
+    "form": {
+      "name": "Votre nom",
+      "email": "Votre email",
+      "website": "URL du site web (optionnel)",
+      "message": "Votre message",
+      "submit": "Envoyer",
+      "errors": {
+        "nameMin": "Votre nom est requis",
+        "nameMax": "Votre ne peut pas dépasser 50 caractères",
+        "emailFormat": "Le format de l'e-mail n'est pas valide",
+        "emailMin": "Votre email est requis",
+        "emailMax": "Votre e-mail ne peut pas dépasser 50 caractères",
+        "websiteMax": "L'URL du site web ne peut pas dépasser 200 caractères",
+        "messageMin": "Votre message est requis",
+        "messageMax": "Le message ne doit pas dépasser 2 000 caractères. Pour les messages plus longs, veuillez m'envoyer mail."
+      }
+    },
+    "contactDetails": "Détails de contact",
+    "socials": "Liens sociaux"
   }
 }

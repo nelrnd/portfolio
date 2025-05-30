@@ -3,6 +3,9 @@
 import { z } from "zod"
 import data from "@/data.json"
 import { Resend } from "resend"
+import { AbstractIntlMessages } from "next-intl"
+import { Pathnames } from "next-intl/routing"
+import { getTranslations } from "next-intl/server"
 
 export type SendEmailState = {
   errors?: {
@@ -20,34 +23,26 @@ export type SendEmailState = {
   message?: string
 }
 
-const sendEmailSchema = z.object({
-  name: z
-    .string()
-    .trim()
-    .min(1, "Name is required")
-    .max(50, "Name cannot exceed 50 characters"),
-  email: z
-    .string()
-    .email("Email format is invalid")
-    .min(1, "Email is required")
-    .max(50, "Email cannot exceed 50 characters"),
-  websiteUrl: z
-    .string()
-    .trim()
-    .max(200, "Website URL cannot exceed 200 characters")
-    .optional(),
-  message: z
-    .string()
-    .trim()
-    .min(1, "Message is required")
-    .max(
-      2000,
-      `Message cannot exceed 2000 characters. For longer messages, send me an email at ${data.contact.email}`
-    ),
-})
+const sendEmailSchema = (t: any) =>
+  z.object({
+    name: z.string().trim().min(1, t("nameMin")).max(50, t("nameMax")),
+    email: z
+      .string()
+      .min(1, t("emailMin"))
+      .max(50, t("emailMax"))
+      .email(t("emailFormat")),
+    websiteUrl: z.string().trim().max(200, t("websiteMax")).optional(),
+    message: z
+      .string()
+      .trim()
+      .min(1, t("messageMin"))
+      .max(2000, t("messageMax")),
+  })
 
 export async function sendEmail(prevState: SendEmailState, formData: FormData) {
-  const validatedFields = sendEmailSchema.safeParse({
+  const t = await getTranslations("Contact.form.errors")
+
+  const validatedFields = sendEmailSchema(t).safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
     websiteUrl: formData.get("website-url"),

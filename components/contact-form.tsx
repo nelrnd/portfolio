@@ -3,8 +3,10 @@
 import { useActionState } from "react"
 import { sendEmail, SendEmailState } from "@/lib/actions"
 import { MagneticButton } from "./magnetic"
+import { useTranslations } from "next-intl"
 
 export default function ContactForm() {
+  const t = useTranslations("Contact")
   const initialState: SendEmailState = { errors: {}, data: {} }
   const [state, formAction, isPending] = useActionState(sendEmail, initialState)
 
@@ -14,7 +16,7 @@ export default function ContactForm() {
         <input
           type="text"
           name="name"
-          placeholder="Your name"
+          placeholder={t("form.name")}
           className="w-full h-[2.75em] border-b border-b-subtle focus:border-b-foreground focus:outline-none"
           defaultValue={state.data?.name}
         />
@@ -26,7 +28,7 @@ export default function ContactForm() {
         <input
           type="email"
           name="email"
-          placeholder="Your email"
+          placeholder={t("form.email")}
           className="w-full h-[2.75em] border-b border-b-subtle focus:border-b-foreground focus:outline-none"
           defaultValue={state.data?.email}
         />
@@ -40,7 +42,7 @@ export default function ContactForm() {
         <input
           type="url"
           name="website-url"
-          placeholder="Website URL (optional)"
+          placeholder={t("form.website")}
           className="w-full h-[2.75em] border-b border-b-subtle focus:border-b-foreground focus:outline-none"
           defaultValue={state.data?.websiteUrl}
         />
@@ -54,7 +56,7 @@ export default function ContactForm() {
         <textarea
           name="message"
           id="message"
-          placeholder="Your message"
+          placeholder={t("form.message")}
           className="w-full h-[6em] border-b border-b-subtle focus:border-b-foreground focus:outline-none"
           defaultValue={state.data?.message}
         />
@@ -72,7 +74,7 @@ export default function ContactForm() {
         className="bg-foreground text-background w-full font-medium"
         locked={true}
       >
-        {isPending ? "Loading..." : "Submit"}
+        {isPending ? "Loading..." : t("form.submit")}
       </MagneticButton>
     </form>
   )

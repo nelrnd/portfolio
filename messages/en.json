@@ -1,6 +1,29 @@
 {
   "HomePage": {
     "title": "Hello World!",
-    "about": "Try to change langage"
+    "about": "Try to change langage",
+    "projectListTitle": "Here's some of my work"
+  },
+  "Contact": {
+    "heading": "Let's start<br></br> something",
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "website": "Website URL (optional)",
+      "message": "Your message",
+      "submit": "Submit",
+      "errors": {
+        "nameMin": "Name is required",
+        "nameMax": "Name cannot exceed 50 characters",
+        "emailFormat": "Email format is invalid",
+        "emailMin": "Email is required",
+        "emailMax": "Email cannot exceed 50 characters",
+        "websiteMax": "Website URL cannot exceed 200 characters",
+        "messageMin": "Message is required",
+        "messageMax": "Message cannot exceed 2 000 characters. For longer messages, send me an email."
+      }
+    },
+    "contactDetails": "Contact details",
+    "socials": "Socials"
   }
 }
