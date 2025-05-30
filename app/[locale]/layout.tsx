@@ -1,6 +1,9 @@
+import { NextIntlClientProvider, hasLocale } from "next-intl"
+import { notFound } from "next/navigation"
+import { routing } from "@/i18n/routing"
 import type { Metadata } from "next"
 import { Space_Grotesk } from "next/font/google"
-import "./globals.css"
+import "@/app/globals.css"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import ReactLenis from "lenis/react"
@@ -27,22 +30,31 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(SplitText, ScrollTrigger)
 }
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode
-}>) {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  if (!hasLocale(routing.locales, locale)) {
+    notFound()
+  }
+
   return (
     <ReactLenis root>
-      <html lang="en">
+      <html lang={locale}>
         <body className={`${spaceGrotesk.className} antialiased`}>
-          <MousePosProvider>
-            <div className="relative z-10">
-              <Navbar />
-              {children}
-              <Footer />
-            </div>
-          </MousePosProvider>
+          <NextIntlClientProvider>
+            <MousePosProvider>
+              <div className="relative z-10">
+                <Navbar />
+                {children}
+                <Footer />
+              </div>
+            </MousePosProvider>
+          </NextIntlClientProvider>
         </body>
       </html>
       <ScrollTop />
