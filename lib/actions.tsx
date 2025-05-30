@@ -1,10 +1,7 @@
 "use server"
 
 import { z } from "zod"
-import data from "@/data.json"
 import { Resend } from "resend"
-import { AbstractIntlMessages } from "next-intl"
-import { Pathnames } from "next-intl/routing"
 import { getTranslations } from "next-intl/server"
 
 export type SendEmailState = {
@@ -23,7 +20,7 @@ export type SendEmailState = {
   message?: string
 }
 
-const sendEmailSchema = (t: any) =>
+const sendEmailSchema = (t: (name: string) => string) =>
   z.object({
     name: z
       .string()
