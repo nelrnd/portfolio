@@ -2,17 +2,22 @@ import AnimatedHeading from "@/components/animated-heading"
 import CTA from "@/components/cta"
 import Grid from "@/components/grid"
 import { MagneticLink } from "@/components/magnetic"
+import RichText from "@/components/rich-text"
 import Section from "@/components/section"
 import Tag from "@/components/tag"
 import data from "@/data.json"
+import { routing } from "@/i18n/routing"
 import { Project } from "@/lib/definitions"
 import { ArrowUpIcon, ChevronRightIcon } from "@heroicons/react/16/solid"
 import type { Metadata } from "next"
+import { hasLocale, useTranslations } from "next-intl"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 import Image from "next/image"
 import Link from "next/link"
+import { notFound } from "next/navigation"
 
 type Props = {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string; locale: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -26,7 +31,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Page({ params }: Props) {
-  const { slug } = await params
+  const { slug, locale } = await params
+  if (!hasLocale(routing.locales, locale)) {
+    notFound()
+  }
+  setRequestLocale(locale)
   const index = data.projects.content.findIndex(
     (project) => project.slug === slug
   )
@@ -35,6 +44,8 @@ export default async function Page({ params }: Props) {
   const nextProject = data.projects.content[nextIndex]
 
   if (!project) return <p>Project not found</p>
+
+  const t = await getTranslations(`Work.projects.${project.slug}`)
 
   return (
     <main>
@@ -58,7 +69,7 @@ export default async function Page({ params }: Props) {
         </Section>
       )}
       <ProjectInfo project={project} />
-      <ProjectDescription desc={project.desc} />
+      <ProjectDescription desc={t("description")} />
       {project.images && project.images.length > 1 && (
         <Section>
           <div className="flex flex-col items-center gap-16">
@@ -75,6 +86,8 @@ export default async function Page({ params }: Props) {
 }
 
 function ProjectInfo({ project }: { project: Project }) {
+  const t = useTranslations("Work")
+
   return (
     <Section as="header" className="py-4 sm:py-8 lg:py-8">
       <Grid className="gap-6 sm:grid-cols-12 items-start">
@@ -82,7 +95,7 @@ function ProjectInfo({ project }: { project: Project }) {
           <AnimatedHeading className="text-[2rem] sm:text-[5rem] lg:text-[8rem] leading-[120%] mb-1">
             {project.title}
           </AnimatedHeading>
-          <p>{project.subTitle}</p>
+          <p>{t(`projects.${project.slug}.subTitle`)}</p>
         </div>
         <div className="flex flex-wrap items-center gap-2 sm:gap-4 sm:gap-y-3 sm:col-span-4 lg:col-span-6">
           {project.tags.map((tag) => (
@@ -91,15 +104,15 @@ function ProjectInfo({ project }: { project: Project }) {
         </div>
         <Grid className="grid-cols-2 sm:col-span-8 lg:col-span-6">
           <div>
-            <h3 className="title mb-3">Year</h3>
+            <h3 className="title mb-3">{t("labels.year")}</h3>
             <p>{project.year}</p>
           </div>
           <div>
-            <h3 className="title mb-3">Roles</h3>
+            <h3 className="title mb-3">{t("labels.roles")}</h3>
             <ul>
-              {project.roles.map((role) => (
-                <li key={role}>{role}</li>
-              ))}
+              <RichText>
+                {(tags) => t.rich(`projects.${project.slug}.roles`, tags)}
+              </RichText>
             </ul>
           </div>
         </Grid>
@@ -110,7 +123,7 @@ function ProjectInfo({ project }: { project: Project }) {
             target="_blank"
             className="btn btn-primary"
           >
-            <span className="flex-1">Website</span>
+            <span className="flex-1">{t("labels.website")}</span>
             <ArrowUpIcon className="size-[1em] rotate-45" />
           </Link>
           <Link
@@ -118,7 +131,7 @@ function ProjectInfo({ project }: { project: Project }) {
             target="_blank"
             className="btn btn-secondary"
           >
-            <span className="flex-1">Code</span>
+            <span className="flex-1">{t("labels.code")}</span>
             <ArrowUpIcon className="size-[1em] rotate-45" />
           </Link>
         </div>
@@ -138,6 +151,8 @@ function ProjectDescription({ desc }: { desc: string }) {
 }
 
 function ProjectNext({ nextProject }: { nextProject: Project }) {
+  const t = useTranslations("Work.labels")
+
   return (
     <Section>
       <MagneticLink
@@ -145,7 +160,7 @@ function ProjectNext({ nextProject }: { nextProject: Project }) {
         className="w-fit m-auto lg:text-[4rem] lg:px-16 lg:h-[160px]"
         icon={<ChevronRightIcon className="size-[0.75em]" />}
       >
-        Next work
+        {t("next")}
       </MagneticLink>
     </Section>
   )

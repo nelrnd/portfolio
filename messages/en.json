@@ -27,5 +27,37 @@
     },
     "contactDetails": "Contact details",
     "socials": "Socials"
+  },
+  "About": {
+    "heading": "A few words<br></br>about me",
+    "text": "<p>My creative journey began early, from creating stop-motion animations with my LEGOs at 11 to doing 3D renders of my Minecraft worlds on industyry-leading software at 15. This passion for digital creation led me to discover web design and development, where I found my calling.</p><p>Now, I use my skills into helping businesses succeed online. I design and build digital experiences that drive growth and boost conversions. My approach combines technical expertise with creative vision.</p><p>I also enjoy adventure, good design, and nature</p>"
+  },
+  "Work": {
+    "heading": "Selected works",
+    "labels": {
+      "next": "Next work",
+      "more": "View more",
+      "year": "Year",
+      "roles": "Roles",
+      "website": "Website",
+      "code": "Code"
+    },
+    "projects": {
+      "ahsi": {
+        "subTitle": "Social media",
+        "roles": "<li>UX/UI designer</li><li>Frontend developer</li><li>Backend developer</li>",
+        "description": "AHSI is a feature-rich social networking platform built with Next.js that delivers an intuitive user experience. This full-stack application allows users to create accounts, post text and photo content, interact through likes and comments, and discover new people via a search system. User can browser other people's profile and follow them. Users receive notifications when receiving new likes and comments on their posts, or when someone starts following them. Leveraging modern web development practices, AHSI delivers a responsive design that works flawlessly across all devices, while maintaining robust performance through optimized server-side rendering."
+      },
+      "opwear": {
+        "subTitle": "E-Commerce store",
+        "roles": "<li>UX/UI designer</li><li>Frontend developer</li><li>Backend developer</li>",
+        "description": "OpWear is a sophisticated e-commerce platform specializing in high-end streetwear fashion. This comprehensive online store enables customers to browse an extensive collection organized by categories and brands. Users can easily add products to their shopping cart and create personalized wishlists after registering for an account. The platform features an intuitive search system that helps shoppers quickly find specific items. Behind the scenes, OpWear includes a robust admin interface where authorized personnel can manage the entire product ecosystem—adding, editing, and removing categories, brands, and individual items. Through thoughtful UX design and efficient database management, OpWear delivers a seamless shopping experience for streetwear enthusiasts while providing powerful inventory control tools for business operations."
+      },
+      "boochat": {
+        "subTitle": "Live chat app",
+        "roles": "<li>UX/UI designer</li><li>Frontend developer</li><li>Backend developer</li>",
+        "description": "BooChat is a dynamic real-time messaging platform built with React, Express, and Socket.io that provides seamless communication experiences. This full-stack application harnesses the power of WebSockets to enable instant message delivery and status updates. Users can create personal accounts, search for contacts, initiate one-on-one conversations, establish group chats, and share images effortlessly. The interface offers intuitive real-time indicators showing when contacts are online or actively typing in a conversation. BooChat enhances the social experience with interactive elements, including an embedded tic-tac-toe game that friends can enjoy while chatting. Through thoughtful implementation of modern web technologies, BooChat delivers responsive performance across devices while maintaining secure and reliable connections for all communications."
+      }
+    }
   }
 }

@@ -1,18 +1,19 @@
-import data from "@/data.json"
 import Section from "./section"
 import AnimatedHeading from "./animated-heading"
+import { useTranslations } from "next-intl"
+import RichText from "./rich-text"
 
-export default async function About() {
-  const { about } = data
+export default function About() {
+  const t = useTranslations("About")
 
   return (
     <Section>
       <AnimatedHeading>
-        A few words
-        <br />
-        about me
+        <RichText>{(tags) => t.rich("heading", tags)}</RichText>
       </AnimatedHeading>
-      <p className="fluid-copy">{about}</p>
+      <div className="fluid-copy space-y-4 md:space-y-8">
+        <RichText>{(tags) => t.rich("text", tags)}</RichText>
+      </div>
     </Section>
   )
 }

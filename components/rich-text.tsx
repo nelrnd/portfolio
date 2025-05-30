@@ -1,4 +1,4 @@
-type Tag = "strong" | "em" | "br"
+type Tag = "p" | "li" | "strong" | "em" | "br"
 
 type Props = {
   children(
@@ -10,6 +10,10 @@ export default function RichText({ children }: Props) {
   return (
     <>
       {children({
+        p: (chunks: React.ReactNode) => <p>{chunks}</p>,
+        li: (chunks: React.ReactNode) => (
+          <li key={chunks?.toString()}>{chunks}</li>
+        ),
         strong: (chunks: React.ReactNode) => (
           <strong className="font-bold">{chunks}</strong>
         ),

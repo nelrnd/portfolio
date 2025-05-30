@@ -26,7 +26,6 @@
         "title": "AHSI",
         "subTitle": "Social Media App",
         "year": 2025,
-        "roles": ["UX/UI designer", "Frontend developer", "Backend developer"],
         "tags": ["Next.js", "Tailwind CSS", "NextAuth", "Prisma"],
         "thumbnail": "/ahsi-thumbnail.png",
         "gradient": {

@@ -27,5 +27,37 @@
     },
     "contactDetails": "Détails de contact",
     "socials": "Liens sociaux"
+  },
+  "About": {
+    "heading": "Quelques mots<br></br>à mon propos",
+    "text": "<p>Mon parcours créatif à commencé vers mes 11 ans, lorsque j'ai décidé de réaliser des petits films d'animations en stop-motion avec mes LEGO. J'ai passé mon enfance à créer des choses sur l'ordinateur familial. Puis j'ai découvert le design et le développement web et j'y ai trouvé ma vocation.</p><p>Désormais, j'utilise mes compétences pour aider les entreprises à réussir en ligne. Je conçois et construis des expériences numériques qui amènent de vrais résultats et augmentent les conversions. Mon approche combine compétences techniques et vision créative.</p><p>J'aime aussi le voyage, le design industriel, et la nature.</p>"
+  },
+  "Work": {
+    "heading": "Mes projets",
+    "labels": {
+      "next": "Projet suivant",
+      "more": "Voir plus",
+      "year": "Année",
+      "roles": "Rôles",
+      "website": "Site web",
+      "code": "Code"
+    },
+    "projects": {
+      "ahsi": {
+        "subTitle": "Réseau social",
+        "roles": "<li>Designer UX/UI</li><li>Développeur front-end</li><li>Développeur back-end</li>",
+        "description": "AHSI est une plateforme de réseau social riche en fonctionnalités développée avec Next.js qui offre une expérience utilisateur intuitive. Cette application full-stack permet aux utilisateurs de créer des comptes, publier du contenu textuel et photographique, interagir via des likes et commentaires, et découvrir de nouvelles personnes grâce à un système de recherche. Les utilisateurs peuvent consulter les profils d'autres personnes et les suivre. Les utilisateurs reçoivent des notifications lorsqu'ils reçoivent de nouveaux likes et commentaires sur leurs publications, ou lorsque quelqu'un commence à les suivre. En s'appuyant sur les pratiques modernes de développement web, AHSI offre un design responsive qui fonctionne parfaitement sur tous les appareils, tout en maintenant des performances robustes grâce au rendu côté serveur optimisé."
+      },
+      "opwear": {
+        "subTitle": "Boutique e-commerce",
+        "roles": "<li>Designer UX/UI</li><li>Développeur front-end</li><li>Développeur back-end</li>",
+        "description": "OpWear est une plateforme e-commerce sophistiquée spécialisée dans la mode streetwear haut de gamme. Cette boutique en ligne complète permet aux clients de parcourir une vaste collection organisée par catégories et marques. Les utilisateurs peuvent facilement ajouter des produits à leur panier et créer des listes de souhaits personnalisées après avoir créé un compte. La plateforme dispose d'un système de recherche intuitif qui aide les acheteurs à trouver rapidement des articles spécifiques. En arrière-plan, OpWear inclut une interface d'administration robuste où le personnel autorisé peut gérer l'ensemble de l'écosystème produit—ajouter, modifier et supprimer des catégories, marques et articles individuels."
+      },
+      "boochat": {
+        "subTitle": "App de chat en live",
+        "roles": "<li>Designer UX/UI</li><li>Développeur front-end</li><li>Développeur back-end</li>",
+        "description": "BooChat est une plateforme de messagerie dynamique en temps réel développée avec React, Express et Socket.io qui offre des expériences de communication fluides. Cette application full-stack exploite la puissance des WebSockets pour permettre la livraison instantanée de messages. Les utilisateurs peuvent créer un compte, rechercher des contacts, initier des conversations individuelles, établir des discussions de groupe et partager des images sans effort. L'interface propose des indicateurs intuitifs en temps réel montrant quand les contacts sont en ligne ou en train de taper dans une conversation. BooChat enrichit l'expérience sociale avec des éléments interactifs, incluant un jeu de morpion intégré que les amis peuvent apprécier tout en discutant. Grâce à une implémentation réfléchie des technologies web modernes, BooChat offre des performances responsives sur tous les appareils tout en maintenant des connexions sécurisées et fiables."
+      }
+    }
   }
 }
