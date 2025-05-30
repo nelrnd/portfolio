@@ -21,7 +21,9 @@
         "websiteMax": "L'URL du site web ne peut pas dépasser 200 caractères",
         "messageMin": "Votre message est requis",
         "messageMax": "Le message ne doit pas dépasser 2 000 caractères. Pour les messages plus longs, veuillez m'envoyer mail."
-      }
+      },
+      "serverError": "Une erreur s'est produite, réessayez",
+      "sent": "Message envoyé, merci"
     },
     "contactDetails": "Détails de contact",
     "socials": "Liens sociaux"

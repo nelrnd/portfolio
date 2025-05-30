@@ -25,22 +25,26 @@ export type SendEmailState = {
 
 const sendEmailSchema = (t: any) =>
   z.object({
-    name: z.string().trim().min(1, t("nameMin")).max(50, t("nameMax")),
+    name: z
+      .string()
+      .trim()
+      .min(1, t("errors.nameMin"))
+      .max(50, t("errors.nameMax")),
     email: z
       .string()
-      .min(1, t("emailMin"))
-      .max(50, t("emailMax"))
-      .email(t("emailFormat")),
-    websiteUrl: z.string().trim().max(200, t("websiteMax")).optional(),
+      .min(1, t("errors.emailMin"))
+      .max(50, t("errors.emailMax"))
+      .email(t("errors.emailFormat")),
+    websiteUrl: z.string().trim().max(200, t("errors.websiteMax")).optional(),
     message: z
       .string()
       .trim()
-      .min(1, t("messageMin"))
-      .max(2000, t("messageMax")),
+      .min(1, t("errors.messageMin"))
+      .max(2000, t("errors.messageMax")),
   })
 
 export async function sendEmail(prevState: SendEmailState, formData: FormData) {
-  const t = await getTranslations("Contact.form.errors")
+  const t = await getTranslations("Contact.form")
 
   const validatedFields = sendEmailSchema(t).safeParse({
     name: formData.get("name"),
@@ -73,8 +77,8 @@ export async function sendEmail(prevState: SendEmailState, formData: FormData) {
   console.log(data)
 
   if (error) {
-    return { message: "Something went wrong, try again" }
+    return { message: t("serverError") }
   }
 
-  return { message: "Messange sent, thank you!" }
+  return { message: t("sent") }
 }

@@ -21,7 +21,9 @@
         "websiteMax": "Website URL cannot exceed 200 characters",
         "messageMin": "Message is required",
         "messageMax": "Message cannot exceed 2 000 characters. For longer messages, send me an email."
-      }
+      },
+      "serverError": "Something went wrong, try again",
+      "sent": "Message sent, thank you"
     },
     "contactDetails": "Contact details",
     "socials": "Socials"
