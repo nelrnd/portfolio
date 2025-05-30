@@ -8,7 +8,7 @@ import { MagneticLink } from "./magnetic"
 import { useTranslations } from "next-intl"
 
 export function ProjectCard({ project }: { project: Project }) {
-  const t = useTranslations(`Work.projects.${project.slug}`)
+  const t = useTranslations(`Work`)
 
   return (
     <Link href={`/work/${project.slug}`}>
@@ -18,7 +18,7 @@ export function ProjectCard({ project }: { project: Project }) {
 
           <div className="space-y-5">
             <h3 className="text-2xl sm:text-[2.5rem]">
-              {project.title} / {t("subTitle")}
+              {project.title} / {t(`projects.${project.slug}.subTitle`)}
             </h3>
             <div className="flex flex-wrap items-center gap-2 sm:gap-4">
               {project.tags.map((tag) => (
@@ -34,7 +34,7 @@ export function ProjectCard({ project }: { project: Project }) {
             src={project.thumbnail}
             width={716}
             height={400}
-            alt={`${project.title} / ${t("subTitle")}`}
+            alt={`${project.title} / ${t(`projects.${project.slug}.subTitle`)}`}
           />
         </div>
       </div>
