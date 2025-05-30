@@ -27,13 +27,21 @@ export default function MagneticButton({
     ty: { previous: 0, current: 0, amt: 0.2 },
   })
   const state = useRef({ hover: false })
-  const rect = useRef<DOMRect>(null)
+  const rect = useRef<any>({})
   const distanceToTrigger = useRef<number>(null)
 
   const calculateSizePosition = () => {
-    rect.current = elRef.current?.getBoundingClientRect() || null
+    if (!elRef.current) return
+    const elRect = elRef.current.getBoundingClientRect()
+    rect.current = {
+      top: elRect.top,
+      left: elRect.left,
+      width: elRect.width,
+      height: elRect.height,
+    }
+    rect.current.top += window.scrollY
     if (rect.current) {
-      distanceToTrigger.current = rect.current?.width * 0.7
+      distanceToTrigger.current = rect.current?.width * 0.5
     }
   }
 
@@ -58,12 +66,12 @@ export default function MagneticButton({
         (mousePosRef.x +
           window.scrollX -
           (rect.current.left + rect.current.width / 2)) *
-        0.3
+        0.2
       y =
         (mousePosRef.y +
           window.scrollY -
           (rect.current.top + rect.current.height / 2)) *
-        0.3
+        0.2
     } else if (state.current.hover) {
       // leave()
       console.log()
@@ -145,7 +153,7 @@ export default function MagneticButton({
   return (
     <button
       className={cn(
-        "cursor-pointer appearance-none border border-border hover:border-foreground bg-background text-foreground rounded group active:scale-95 will-change-transform h-20 min-w-48 m-4 text-2xl overflow-hidden flex items-center justify-center",
+        "cursor-pointer appearance-none border border-border hover:border-foreground bg-background text-foreground rounded-xl group active:scale-95 will-change-transform h-20 min-w-48 px-12 m-4 text-2xl overflow-hidden flex items-center justify-center",
         className
       )}
       {...props}
