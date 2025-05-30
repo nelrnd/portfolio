@@ -48,8 +48,8 @@ export default async function Page({ params }: Props) {
           >
             <Image
               src={project.images[0]}
-              width={720}
-              height={450}
+              width={1400}
+              height={875}
               alt=""
               className="shadow max-h-full w-auto"
               quality={100}
@@ -63,7 +63,7 @@ export default async function Page({ params }: Props) {
         <Section>
           <div className="flex flex-col items-center gap-16">
             {project.images.slice(1).map((image, id) => (
-              <Image key={id} src={image} width={720} height={450} alt="" />
+              <Image key={id} src={image} width={1400} height={875} alt="" />
             ))}
           </div>
         </Section>

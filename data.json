@@ -66,15 +66,15 @@
         },
         "thumbnail": "/opwear-thumbnail.png",
         "images": [
-          "/opwear_1.jpg",
-          "/opwear_2.jpg",
-          "/opwear_3.jpg",
-          "/opwear_4.jpg",
-          "/opwear_5.jpg",
-          "/opwear_6.jpg",
-          "/opwear_7.jpg",
-          "/opwear_8.jpg",
-          "/opwear_9.jpg",
+          "/opwear_01.jpg",
+          "/opwear_02.jpg",
+          "/opwear_03.jpg",
+          "/opwear_04.jpg",
+          "/opwear_05.jpg",
+          "/opwear_06.jpg",
+          "/opwear_07.jpg",
+          "/opwear_08.jpg",
+          "/opwear_09.jpg",
           "/opwear_10.jpg"
         ],
         "links": {
@@ -96,13 +96,13 @@
         },
         "thumbnail": "/boochat-thumbnail.png",
         "images": [
-          "/boochat_1.jpg",
-          "/boochat_2.jpg",
-          "/boochat_3.jpg",
-          "/boochat_4.jpg",
-          "/boochat_5.jpg",
-          "/boochat_6.jpg",
-          "/boochat_7.jpg"
+          "/boochat_01.jpg",
+          "/boochat_02.jpg",
+          "/boochat_03.jpg",
+          "/boochat_04.jpg",
+          "/boochat_05.jpg",
+          "/boochat_06.jpg",
+          "/boochat_07.jpg"
         ],
         "links": {
           "website": "https://chat.nel.dev/",
