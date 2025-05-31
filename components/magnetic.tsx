@@ -126,22 +126,25 @@ export function MagneticButton({
     {}
   )
 
-  const { contextSafe } = useGSAP(() => {
-    document.fonts.ready.then(() => {
-      if (!textInnerRef.current) return
-      const text = textInnerRef.current.firstElementChild as HTMLElement
-      const subtext = textInnerRef.current.lastElementChild as HTMLElement
+  const { contextSafe } = useGSAP(
+    () => {
+      document.fonts.ready.then(() => {
+        if (!textInnerRef.current) return
+        const text = textInnerRef.current.firstElementChild as HTMLElement
+        const subtext = textInnerRef.current.lastElementChild as HTMLElement
 
-      if (text && subtext) {
-        splitInstancesRef.current.text = SplitText.create(text, {
-          type: "chars",
-        })
-        splitInstancesRef.current.subText = SplitText.create(subtext, {
-          type: "chars",
-        })
-      }
-    })
-  })
+        if (text && subtext) {
+          splitInstancesRef.current.text = SplitText.create(text, {
+            type: "chars",
+          })
+          splitInstancesRef.current.subText = SplitText.create(subtext, {
+            type: "chars",
+          })
+        }
+      })
+    },
+    { dependencies: [children] }
+  )
 
   const handleMouseEnter = contextSafe(() => {
     const { text, subText } = splitInstancesRef.current
@@ -156,6 +159,8 @@ export function MagneticButton({
     gsap.to(text.chars, { yPercent: 0, stagger: 0.02 })
     gsap.to(subText.chars, { yPercent: 0, stagger: 0.02 })
   })
+
+  useEffect(() => {}, [])
 
   return (
     <button
