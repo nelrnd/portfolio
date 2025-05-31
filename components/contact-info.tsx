@@ -1,6 +1,7 @@
 import data from "@/data.json"
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/navigation"
+import WaveText from "./wave-text"
 
 export default function ContactInfo() {
   const t = useTranslations("Contact")
@@ -9,18 +10,20 @@ export default function ContactInfo() {
   return (
     <div className="space-y-8 md:space-y-12">
       <div>
-        <h3 className="title mb-2 md:text-xl">{t("contactDetails")}</h3>
-        <p className="md:text-4xl">
-          <Link href={`mailto:${contact.email}`}>{contact.email}</Link>
-        </p>
+        <h3 className="title mb-2">{t("contactDetails")}</h3>
+        <div className="md:text-2xl">
+          <Link href={`mailto:${contact.email}`}>
+            <WaveText text={contact.email} />
+          </Link>
+        </div>
       </div>
       <div>
-        <h3 className="title mb-2 md:text-xl">{t("socials")}</h3>
-        <ul className="space-y-2 md:space-y-6">
+        <h3 className="title mb-2">{t("socials")}</h3>
+        <ul className="space-y-2 md:space-y-3">
           {socials.map((social) => (
-            <li key={social.name} className="md:text-4xl">
+            <li key={social.name} className="md:text-2xl">
               <Link href={social.url} target="_blank">
-                {social.name}
+                <WaveText text={social.name} />
               </Link>
             </li>
           ))}

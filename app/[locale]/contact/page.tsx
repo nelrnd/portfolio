@@ -26,7 +26,7 @@ export default function Page({
   return (
     <main>
       <Section>
-        <AnimatedHeading className="text-center text-[2rem] md:text-[4rem] lg:text-[6rem] leading-[120%] max-w-[900px] m-auto">
+        <AnimatedHeading className="headline text-center leading-[120%] max-w-[900px] m-auto">
           <RichText>{(tags) => t.rich("heading", tags)}</RichText>
         </AnimatedHeading>
       </Section>
