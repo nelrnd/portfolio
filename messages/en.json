@@ -42,7 +42,7 @@
   },
   "About": {
     "heading": "A few words<br></br>about me",
-    "text": "<p>My creative journey began early, from creating stop-motion animations with my LEGOs at 11 to doing 3D renders of my Minecraft worlds on industyry-leading software at 15. This passion for digital creation led me to discover web design and development, where I found my calling.</p><p>Now, I use my skills into helping businesses succeed online. I design and build digital experiences that drive growth and boost conversions. My approach combines technical expertise with creative vision.</p><p>I also enjoy adventure, good design, and nature</p>"
+    "text": "<p>My creative journey began early, from creating stop-motion animations with my LEGOs at 11 to doing 3D renders of my Minecraft worlds on industyry-leading software at 15. This passion for digital creation led me to discover web design and development, where I found my calling.</p><p>Now, I use my skills into helping businesses succeed online. I design and build digital experiences that drive growth and boost conversions. My approach combines technical expertise with creative vision.</p><p>I also enjoy adventure, good design, and nature.</p>"
   },
   "Work": {
     "heading": "Selected works",
@@ -98,7 +98,7 @@
       "location": "Paris, FRANCE",
       "availability": "Available for work"
     },
-    "btnText": "Me contacter"
+    "btnText": "Get in touch"
   },
   "EndNote": {
     "heading": "Thank’s for the visit! ✌️",
