@@ -1,10 +1,6 @@
 "use client"
 
 import Section from "./section"
-import { useGSAP } from "@gsap/react"
-import { useRef } from "react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useTranslations } from "next-intl"
 import RichText from "./rich-text"
 
@@ -36,7 +32,7 @@ export default function Marketing() {
     </Section>
   )
 }
-
+/*
 gsap.registerPlugin(ScrollTrigger)
 
 function Result({
@@ -73,3 +69,4 @@ function Result({
     </div>
   )
 }
+*/
