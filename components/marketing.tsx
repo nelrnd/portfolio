@@ -18,12 +18,13 @@ export default function Marketing() {
           <RichText>{(tags) => t.rich("stance", tags)}</RichText>
         </p>
       </div>
+      {/*
       <div>
         <h2 className="sm:text-2xl lg:text-[2.5rem] leading-[170%] mb-[1.5rem] sm:mb-[3rem]">
           {t("results.heading")}
         </h2>
 
-        <div className="flex flex-col gap-8">
+        <div className="flex gap-8">
           {["1", "2", "3"].map((key, id) => (
             <Result key={key} isEven={id % 2 === 0}>
               {t(`results.content.${key}`)}
@@ -31,6 +32,7 @@ export default function Marketing() {
           ))}
         </div>
       </div>
+       */}
     </Section>
   )
 }
@@ -64,7 +66,7 @@ function Result({
     <div className="group" ref={container}>
       <div
         ref={card}
-        className="relative group-even:ml-auto z-10 p-8 sm:text-2xl lg:text-[2.5rem] leading-[170%] border border-border sm:w-[80vw] lg:w-[60vw] lg:min-h-[400px] flex items-end"
+        className="relative group-even:ml-auto z-10 p-8 text-xl leading-[170%] border border-border lg:min-h-[400px] flex items-end"
       >
         <p className="sm:w-5/6">{children}</p>
       </div>
